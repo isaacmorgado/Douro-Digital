@@ -4815,9 +4815,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   'use strict';
 
   // Wait for GSAP and ScrollTrigger to be available
+  var _gsapRetry = 0;
   function initCustomAnimations() {
+    console.log('[scroll-debug] checking GSAP availability... gsap=' + (typeof gsap !== 'undefined') + ' ScrollTrigger=' + (typeof ScrollTrigger !== 'undefined'));
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-      console.warn('GSAP or ScrollTrigger not found, retrying...');
+      _gsapRetry++;
+      console.warn('[scroll-debug] GSAP not found, retry #' + _gsapRetry);
       setTimeout(initCustomAnimations, 100);
       return;
     }
@@ -4915,15 +4918,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     // Initialize all animations
     function initAllAnimations() {
+      var revealCount = document.querySelectorAll('[asset-reveal]').length;
+      var cardCount = document.querySelectorAll('.c-service-card').length;
+      var buttonCount = document.querySelectorAll('.c-button.cc-main').length;
+      console.log('[scroll-debug] initAssetRevealAnimations: ' + revealCount + ' elements');
       initAssetRevealAnimations();
+      console.log('[scroll-debug] initServiceAnimations: ' + cardCount + ' cards');
       initServiceAnimations();
+      console.log('[scroll-debug] initButtonAnimations: ' + buttonCount + ' buttons');
       initButtonAnimations();
     }
 
     // Run on DOM ready
     if (document.readyState === 'loading') {
+      console.log('[scroll-debug] DOM still loading, waiting for DOMContentLoaded');
       document.addEventListener('DOMContentLoaded', initAllAnimations);
     } else {
+      console.log('[scroll-debug] DOM already ready, running animations immediately');
       initAllAnimations();
     }
 
@@ -4936,7 +4947,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }, 250);
     });
 
-    console.log('Custom animations initialized successfully');
+    console.log('[scroll-debug] custom animations initialized successfully');
   }
 
   // Start initialization

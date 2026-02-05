@@ -16,10 +16,11 @@ function addListener(target, event, fn, opts) {
 
 // ── Init ──────────────────────────────────────────────────────────────
 function initHeroRain() {
+  console.log('[scroll-debug] hero-rain init starting');
   const canvas = document.querySelector('.c-hero-canvas');
-  if (!canvas) return;
+  if (!canvas) { console.log('[scroll-debug] hero-rain: no .c-hero-canvas found, skipping'); return; }
   // Prevent double-init
-  if (renderer) return;
+  if (renderer) { console.log('[scroll-debug] hero-rain: already initialized, skipping'); return; }
 
   renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -264,8 +265,10 @@ void main() {
   // ── Animation Loop ─────────────────────────────────────────────────
   clock = new THREE.Clock();
 
+  let _animLogged = false;
   function animate() {
     animId = requestAnimationFrame(animate);
+    if (!_animLogged) { console.log('[scroll-debug] hero-rain animation loop running'); _animLogged = true; }
     if (window.scrollY > window.innerHeight * 1.2) return;
     resize();
     updateMouse();
@@ -294,6 +297,7 @@ void main() {
 
 // ── Destroy ───────────────────────────────────────────────────────────
 function destroyHeroRain() {
+  console.log('[scroll-debug] hero-rain destroyed');
   if (animId) cancelAnimationFrame(animId);
   animId = null;
 

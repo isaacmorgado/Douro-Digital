@@ -497,6 +497,25 @@ section[white].c-section:has(.c-testimonial--gd1--cd12) .c-testimonial--gd1--cd1
     }
 }
 
+/* Force scroll to always work — override Webflow/GSAP overflow locks */
+html, body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+html.animating,
+.animating body {
+    overflow-y: auto !important;
+}
+
+/* Hydration safety — when [no-animation] is set, force GSAP SplitText spans visible */
+[no-animation] .char,
+[no-animation] .word,
+[no-animation] .line {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+}
+
 /* Smooth scrolling — only for anchor links, not on <html> (conflicts with GSAP ScrollTrigger) */
 a[href^="#"] {
     scroll-behavior: smooth;
