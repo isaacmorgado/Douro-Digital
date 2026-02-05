@@ -8,21 +8,7 @@
   }
 }
 </script>
-<script>
-/* Force all wheel listeners passive — prevents GSAP Observer from blocking native scroll */
-(function() {
-  var orig = EventTarget.prototype.addEventListener;
-  EventTarget.prototype.addEventListener = function(type, fn, opts) {
-    if (type === 'wheel' || type === 'mousewheel') {
-      var capture = false;
-      if (typeof opts === 'boolean') capture = opts;
-      else if (opts && typeof opts === 'object') capture = !!opts.capture;
-      opts = { capture: capture, passive: true };
-    }
-    return orig.call(this, type, fn, opts);
-  };
-})();
-</script>
+<script src="../js/scroll-fixes.js"></script>
 <script src="../js/analytics.js" data-key="mv9xlutN8kkXET5c55ZY3g" async></script>
 
 <style>
@@ -391,7 +377,7 @@ html::-webkit-scrollbar {
 }
 
 </style></div><div class="c-custom-code w-embed"><link rel="stylesheet" href="../css/layout.css"/>
-<link rel="stylesheet" href="../css/douro-digital-overrides.css?v=19"/>
+<link rel="stylesheet" href="../css/douro-digital-overrides.css?v=21"/>
 <style>
 @media screen and (max-width:991px) {
   html {	
@@ -791,9 +777,6 @@ _dc.setAttribute('data-select','background');
 _dc.style.cssText='position:absolute;width:0;height:0;opacity:0;pointer-events:none';
 _dc.width=1; _dc.height=1;
 _rc.parentElement.appendChild(_dc);
-window.addEventListener('pageshow', function(e) {
-  if (e.persisted) location.reload();
-});
 </script></div></header></section><section white="" class="c-section"><div class="c-container"><div class="c-title02--gd1--cd12"><div class="c-title02_text--cd8--sd5"><h2 class="c-heading-3">
   Reclaim 20+ Hours a Week. Automate What Slows You Down — Before Your Competitors Do.
 </h2>
@@ -1708,22 +1691,5 @@ document.querySelectorAll('.c-nav_list_dropdown').forEach(function(el){el.queryS
     });
   }
 })();
-</script>
-<script>
-// Safety: ensure scroll is never permanently stuck
-setTimeout(function() {
-  document.documentElement.classList.remove('animating');
-  document.body.classList.remove('overflow', 'hidden');
-  document.body.style.overflowY = '';
-  var pw = document.querySelector('.page-wrapper');
-  if (pw) pw.style.overflow = 'visible';
-}, 1500);
-
-window.addEventListener('load', function() {
-  document.documentElement.classList.remove('animating');
-  document.body.classList.remove('overflow', 'hidden');
-  var pw = document.querySelector('.page-wrapper');
-  if (pw) pw.style.overflow = 'visible';
-});
 </script>
 </body></html>

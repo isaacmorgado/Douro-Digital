@@ -607,6 +607,20 @@ video.c-graphic.cc-portfolio {
     filter: none !important;
 }
 
+/* Footer underlay — don't block scroll or bleed through main content */
+.c-footer-underlay {
+    pointer-events: none !important;
+}
+.c-footer-underlay a,
+.c-footer-underlay button,
+.c-footer-underlay [role="button"] {
+    pointer-events: auto !important;
+}
+/* Solid bg on footer-wrap so fixed underlay never shows through gaps */
+.footer-wrap {
+    background-color: #000000 !important;
+}
+
 /* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
     *,
