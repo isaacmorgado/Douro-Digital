@@ -26,7 +26,32 @@ window.addEventListener('pageshow', function (e) {
   if (e.persisted) location.reload();
 });
 
-/* 3 ── Safety: ensure scroll is never permanently stuck ────────────── */
+/* 3 ── Strip scroll-behavior: smooth from <html> ─────────────────────
+ * Webflow IX2 sets this at runtime. It conflicts with GSAP ScrollTrigger
+ * and makes sticky-hero pages feel frozen (smooth-scrolling through the
+ * ~850px dead zone takes ages with small wheel ticks).
+ */
+(function stripSmoothScroll() {
+  function remove() {
+    var html = document.documentElement;
+    if (html.style.scrollBehavior === 'smooth') {
+      html.style.scrollBehavior = 'auto';
+    }
+  }
+  // Run early, on load, and as a mutation observer in case IX2 sets it late
+  remove();
+  document.addEventListener('DOMContentLoaded', remove);
+  window.addEventListener('load', remove);
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(function (mutations) {
+      for (var i = 0; i < mutations.length; i++) {
+        if (mutations[i].attributeName === 'style') { remove(); return; }
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
+  }
+})();
+
+/* 4 ── Safety: ensure scroll is never permanently stuck ────────────── */
 function unlockScroll() {
   document.documentElement.classList.remove('animating');
   document.body.classList.remove('overflow', 'hidden');

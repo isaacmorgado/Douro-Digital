@@ -497,9 +497,16 @@ section[white].c-section:has(.c-testimonial--gd1--cd12) .c-testimonial--gd1--cd1
     }
 }
 
-/* Smooth scrolling */
-html {
+/* Smooth scrolling — only for anchor links, not on <html> (conflicts with GSAP ScrollTrigger) */
+a[href^="#"] {
     scroll-behavior: smooth;
+}
+
+/* Service pages: eliminate the sticky hero dead zone (base CSS sets top: -850px,
+   which eats ~850px of scroll with no visible change, making the page appear frozen) */
+.c-section.cc-hero-about {
+    position: relative !important;
+    top: 0 !important;
 }
 
 /* Improved focus indicators for keyboard navigation */
