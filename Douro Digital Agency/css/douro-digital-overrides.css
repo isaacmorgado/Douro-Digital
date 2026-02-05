@@ -501,6 +501,7 @@ section[white].c-section:has(.c-testimonial--gd1--cd12) .c-testimonial--gd1--cd1
 html, body {
     overflow-y: auto !important;
     overflow-x: hidden !important;
+    overscroll-behavior: auto !important;
 }
 html.animating,
 .animating body {
