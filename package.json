@@ -1,0 +1,22 @@
+{
+  "name": "refokus-local",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/rewrite-urls.js && node scripts/strip-analytics.js",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "express": "^4.21.0",
+    "livereload": "^0.9.3",
+    "puppeteer": "^24.36.1"
+  },
+  "description": "",
+  "main": "clone-refokus.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

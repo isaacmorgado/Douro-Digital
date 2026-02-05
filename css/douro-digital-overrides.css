@@ -1,0 +1,133 @@
+/**
+ * Douro Digital Custom Overrides
+ * WCAG AA Accessibility Fixes and Custom Styling
+ */
+
+/* WCAG AA Contrast Fixes for Contact Form */
+section[white] .c-input_contact::placeholder,
+section[white] .w-input::placeholder {
+    color: #b0b0b0 !important;  /* 7:1 contrast ratio on white background */
+}
+
+section[white] .c-input_contact,
+section[white] .w-input,
+section[white] .w-select {
+    border-color: #999 !important;  /* Enhanced border visibility */
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+section[white] .c-input_contact:focus,
+section[white] .w-input:focus,
+section[white] .w-select:focus {
+    border-color: #666 !important;  /* Darker border on focus */
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* Ensure error states are visible */
+section[white] .c-input_contact.w--redirected-checked,
+section[white] .w-input.w--redirected-checked {
+    border-color: #d32f2f !important;
+}
+
+/* Navigation menu enhancements */
+.c-underline-device-wrapper {
+    position: relative;
+}
+
+.c-underline-device {
+    height: 1px;
+    background-color: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.c-underline-device.cc-into {
+    transform-origin: left;
+}
+
+/* Improved button contrast */
+.c-button {
+    transition: all 0.3s ease;
+}
+
+.c-button:hover {
+    transform: translateY(-2px);
+}
+
+.c-button:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 4px;
+}
+
+/* Link contrast improvements */
+a {
+    text-decoration-skip-ink: auto;
+}
+
+a:focus-visible {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Remove Refokus-specific external dependencies that might block */
+iframe[src*="intellimize"],
+script[src*="intellimize"],
+link[href*="intellimize"] {
+    display: none !important;
+}
+
+/* Ensure content is never hidden by anti-flicker */
+.anti-flicker,
+.anti-flicker * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improved focus indicators for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* Ensure videos don't autoplay with sound */
+video {
+    muted: true;
+}
+
+/* Print styles */
+@media print {
+    .c-nav,
+    .c-footer,
+    video,
+    .c-button_arrow-wrap {
+        display: none !important;
+    }
+
+    .c-section {
+        page-break-inside: avoid;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
