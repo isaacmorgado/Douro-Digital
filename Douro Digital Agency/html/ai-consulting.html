@@ -68,20 +68,27 @@ input, select {
 }
     
   }
-  
+
 </style>
+<script>
+setTimeout(function() {
+  if (!window.__gsapLoaded) {
+    document.documentElement.setAttribute('no-animation', '');
+  }
+}, 2000);
+</script>
 
 <style>
 body { -webkit-font-smoothing: antialiased; }
-  
+
   .hidden{
   	overflow:hidden;
   }
-  
+
   [scrub-each-word] .c-text-primary{
   	display:contents!important;
   }
-  
+
   .c-nav .c-button.w--current{
     pointer-events: none
   }

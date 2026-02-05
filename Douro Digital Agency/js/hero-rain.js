@@ -318,6 +318,9 @@ function destroyHeroRain() {
   clock = null; rawMouse = null; smoothMouse = null; logoRot = null;
 }
 
+// ── Expose to window for Barba reinit ─────────────────────────────────
+window.__heroRain = { init: initHeroRain, destroy: destroyHeroRain };
+
 // ── Auto-init + bfcache restore ───────────────────────────────────────
 initHeroRain();
 
