@@ -1,10 +1,14 @@
 const express = require('express');
+const compression = require('compression');
 const path = require('path');
 const fs = require('fs');
 const livereload = require('livereload');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
+
+// Enable gzip/brotli compression
+app.use(compression());
 
 // Livereload server — watch html/ and css/
 const lrServer = livereload.createServer({
@@ -17,10 +21,12 @@ lrServer.watch([
 
 const LR_SNIPPET = `<script>(function(){var s=document.createElement('script');s.src='http://'+location.hostname+':35729/livereload.js?snipver=1';document.body.appendChild(s);})();</script>`;
 
-// Static asset directories — try URL-encoded filename on disk if decoded fails
+// Static asset directories — cache headers + URL-encoded filename fallback
 for (const dir of ['css', 'js', 'images', 'videos', 'audio', 'other', 'models']) {
   const dirPath = path.join(__dirname, dir);
   app.use(`/${dir}`, (req, res, next) => {
+    // Cache static assets for 1 day
+    res.setHeader('Cache-Control', 'public, max-age=86400');
     // Express decodes %20 → space, but files on disk may have literal %20 in name
     const encodedName = req.path.slice(1); // strip leading /
     const encodedPath = path.join(dirPath, encodedName);
@@ -28,7 +34,7 @@ for (const dir of ['css', 'js', 'images', 'videos', 'audio', 'other', 'models'])
       return res.sendFile(encodedPath);
     }
     next();
-  }, express.static(dirPath));
+  }, express.static(dirPath, { maxAge: '1d' }));
 }
 
 // Serve HTML files with livereload snippet injected before </body>

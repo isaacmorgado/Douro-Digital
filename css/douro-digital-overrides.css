@@ -6,14 +6,15 @@
 /* WCAG AA Contrast Fixes for Contact Form */
 section[white] .c-input_contact::placeholder,
 section[white] .w-input::placeholder {
-    color: #b0b0b0 !important;  /* 7:1 contrast ratio on white background */
+    color: #999 !important;
 }
 
 section[white] .c-input_contact,
 section[white] .w-input,
 section[white] .w-select {
-    border-color: #999 !important;  /* Enhanced border visibility */
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #666 !important;
+    color: #ffffff !important;
 }
 
 section[white] .c-input_contact:focus,
@@ -28,6 +29,25 @@ section[white] .w-select:focus {
 section[white] .c-input_contact.w--redirected-checked,
 section[white] .w-input.w--redirected-checked {
     border-color: #d32f2f !important;
+}
+
+/* Fix: Remove vertical line from menu */
+.c-nav_menu {
+    border: none !important;
+    transition-property: transform !important;
+}
+
+/* Fix: Services dropdown text size */
+.c-nav_dropdown-content .c-nav_link,
+.c-nav_dropdown-content .c-nav_dropdown-item {
+    font-size: 1.2em !important;
+}
+
+/* Fix: Logo white on dark backgrounds */
+.c-navbar[nav-theme="dark"] .c-nav_brand-logo img,
+div[nav-theme="dark"] .c-nav_brand-logo img,
+.body--contact .c-nav_brand-logo img {
+    filter: brightness(0) invert(1) !important;
 }
 
 /* Navigation menu enhancements */
