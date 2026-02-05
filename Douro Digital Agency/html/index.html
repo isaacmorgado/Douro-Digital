@@ -89,8 +89,15 @@ input, select {
 }
     
   }
-  
+
 </style>
+<script>
+setTimeout(function() {
+  if (!window.__gsapLoaded) {
+    document.documentElement.setAttribute('no-animation', '');
+  }
+}, 2000);
+</script>
 
 <style>
 body { -webkit-font-smoothing: antialiased; }
@@ -255,12 +262,13 @@ input, textarea, select {
 <style>
 
 </style><style>/* Black mode overrides */
-section[white], .c-section[white] { background-color: #0a0a0a !important; color: #f2f2f2 !important; }
+:root { --dark: #000; }
+section[white], .c-section[white] { background-color: #000 !important; color: #f2f2f2 !important; }
 section[white] .c-heading-1, section[white] .c-heading-2, section[white] .c-heading-3, section[white] .c-heading-4, section[white] .c-heading-5, section[white] .c-heading-6, section[white] h1, section[white] h2, section[white] h3, section[white] h4, section[white] h5, section[white] h6 { color: #ffffff !important; }
 section[white] .c-text-1, section[white] .c-text-2, section[white] .c-text-3, section[white] .c-text-4, section[white] .c-text-5, section[white] .c-text-6, section[white] p { color: #e0e0e0 !important; }
 section[white] .c-line { background-color: #333 !important; }
 section[white] .c-overhead { color: #FF3322 !important; }
-.c-get-in-touch { background-color: #0a0a0a !important; color: #f2f2f2 !important; }
+.c-get-in-touch { background-color: #000 !important; color: #f2f2f2 !important; }
 .c-get-in-touch .c-heading-3, .c-get-in-touch .c-heading-6, .c-get-in-touch p { color: #f2f2f2 !important; }
 .c-get-in-touch .c-button.cc-main { color: #f2f2f2 !important; border-color: #f2f2f2 !important; }
 .c-services { background-color: #991111 !important; }
@@ -344,8 +352,7 @@ img, video {
   width: auto;
   display: block;
 }
-.c-navbar[nav-theme="dark"] .c-nav_brand-logo img,
-div[nav-theme="dark"] .c-nav_brand-logo img {
+.c-nav_brand-logo img {
   filter: brightness(0) invert(1) !important;
 }
   /* Fallback: hide loader after 3s in case JS fails */
@@ -384,6 +391,7 @@ html::-webkit-scrollbar {
 }
 
 </style></div><div class="c-custom-code w-embed"><link rel="stylesheet" href="../css/layout.css"/>
+<link rel="stylesheet" href="../css/douro-digital-overrides.css?v=17"/>
 <style>
 @media screen and (max-width:991px) {
   html {	
@@ -632,7 +640,7 @@ a { color:inherit; }
 
 </style></div><div nav-theme="dark" navbar="" class="c-navbar"><div class="c-container cc-nav"><div class="c-nav_wrap"><div open-menu="" change-color="#7542ff" change-size="0.5" nav-btn="" data-w-id="8d359879-50c9-6d12-1f1e-f66080f2478b" class="c-menu_btn cc-nav"><div class="c-overhead">Menu</div></div><a class="c-nav_brand-wrap w-inline-block w--current" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%5D" change-color="#7542ff" data-wf-element-id="8d359879-50c9-6d12-1f1e-f66080f2478e" href="index.html" aria-current="page" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:8d359879-50c9-6d12-1f1e-f66080f2478e" data-wf-ao-click-engagement-tracking="true" change-size="0.5"><div class="c-nav_brand-logo w-embed"><img src="../images/douro-digital-logo.png" alt="Douro Digital" style="height:100%;width:auto;" /></div></a><div class="c-nav_cta"><a class="c-btn cc-nav-cta w-inline-block" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%5D" change-color="#7542ff" data-wf-element-id="8d359879-50c9-6d12-1f1e-f66080f24791" href="contact.html" nav-btn="" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:8d359879-50c9-6d12-1f1e-f66080f24791" data-wf-ao-click-engagement-tracking="true" change-size="0.5"><div class="c-overhead">Contact</div></a></div></div><div close-menu="" data-w-id="117fdfcc-a171-3d13-6ca1-74f2f00f8141" class="nav-menu_bg-click"></div><div change-color="#7542ff" class="c-nav_menu"><div class="c-nav_top"><div close-menu="" change-size="0.5" data-w-id="8d359879-50c9-6d12-1f1e-f66080f24796" class="c-nav_close"><div class="close-svg w-embed"><svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div></div></div><div class="c-nav_list"><div class="c-nav_list_group"><a change-size="0.5" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:529813ad-6e62-cb48-c7bb-4d9eb02a9c90:cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22cccf0f75-3333-ad80-641f-1db576fe369b%22%2C%22instanceId%22%3A%22529813ad-6e62-cb48-c7bb-4d9eb02a9c90%22%7D%5D" href="index.html" aria-current="page" class="c-nav_link home w-inline-block w--current"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Home</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Home</div></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></a><a change-size="0.5" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:5ba76710-94c4-2848-07dc-9d4f345ba8ac:cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22cccf0f75-3333-ad80-641f-1db576fe369b%22%2C%22instanceId%22%3A%225ba76710-94c4-2848-07dc-9d4f345ba8ac%22%7D%5D" href="work.html" class="c-nav_link home w-inline-block"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Portfolio</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Portfolio</div></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></a></div><div class="c-nav_list_group-dropdowns"><div class="c-nav_list_dropdown"><div class="c-nav_item-wrapper" style="cursor:pointer; display: flex; align-items: center; justify-content: space-between;"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Services</div></div></div><div class="c-nav-plus-icon" style="margin-left: 1em;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></div><div class="c-nav_dropdown-content"><div style="display: flex; flex-direction: column; gap: 1em;"><a href="ai-solutions.html" class="c-nav_link c-nav_dropdown-item" style="font-size:0.8em; padding:0.5em 0; display: flex; align-items: center; gap: 1em;"><img src="../images/6867e5af4ce59d080b9ebf42_branding-big.webp" alt="AI Solutions" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px;"><span>AI Solutions &amp; Automation</span></a><a href="custom-development.html" class="c-nav_link c-nav_dropdown-item" style="font-size:0.8em; padding:0.5em 0; display: flex; align-items: center; gap: 1em;"><img src="../images/66c3bb125095523f5ce87a2a_9.webp" alt="Custom Development" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px;"><span>Custom Development</span></a><a href="ai-consulting.html" class="c-nav_link c-nav_dropdown-item" style="font-size:0.8em; padding:0.5em 0; display: flex; align-items: center; gap: 1em;"><img src="../images/66c3bb13c9d1cdce681e0e73_10.webp" alt="AI Consulting" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px;"><span>AI Consulting</span></a></div></div></div><div class="c-nav_list_group cc-contact"><a change-size="0.5" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:58caf455-987e-fc61-0c8a-9942ea693c50:cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22cccf0f75-3333-ad80-641f-1db576fe369b%22%2C%22instanceId%22%3A%2258caf455-987e-fc61-0c8a-9942ea693c50%22%7D%5D" href="contact.html" class="c-nav_link home w-inline-block"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Contact</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Contact</div></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></a></div></div><div class="c-nav_list_group mini-links"><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:c629fec7-ca5b-3333-f53a-8a6d897c3ce3:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%22c629fec7-ca5b-3333-f53a-8a6d897c3ce3%22%7D%5D" href="news.html" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>News &amp; Insights</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>News &amp; Insights</div></div></div></a><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:09f4a732-90d0-9ccf-8f67-69e72d30b5ea:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%2209f4a732-90d0-9ccf-8f67-69e72d30b5ea%22%7D%5D" href="#" target="_blank" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>LinkedIn</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>LinkedIn</div></div></div></a><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:2ac26e2d-29ea-d66b-6b16-cb011e4b29f0:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%222ac26e2d-29ea-d66b-6b16-cb011e4b29f0%22%7D%5D" href="#" target="_blank" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>Instagram</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>Instagram</div></div></div></a><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:b636134f-9ada-576c-fefb-ba442eca7095:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%22b636134f-9ada-576c-fefb-ba442eca7095%22%7D%5D" href="#" target="_blank" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>Twitter (X)</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>Twitter (X)</div></div></div></a></div></div></div></div><div class="css w-embed"><style>
+</svg></div></div></div><div class="c-nav_list"><div class="c-nav_list_group"><a change-size="0.5" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:529813ad-6e62-cb48-c7bb-4d9eb02a9c90:cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22cccf0f75-3333-ad80-641f-1db576fe369b%22%2C%22instanceId%22%3A%22529813ad-6e62-cb48-c7bb-4d9eb02a9c90%22%7D%5D" href="index.html" aria-current="page" class="c-nav_link home w-inline-block w--current"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Home</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Home</div></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></a><a change-size="0.5" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:5ba76710-94c4-2848-07dc-9d4f345ba8ac:cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22cccf0f75-3333-ad80-641f-1db576fe369b%22%2C%22instanceId%22%3A%225ba76710-94c4-2848-07dc-9d4f345ba8ac%22%7D%5D" href="work.html" class="c-nav_link home w-inline-block"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Portfolio</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Portfolio</div></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></a></div><div class="c-nav_list_group-dropdowns"><div class="c-nav_list_dropdown cc-services cc-active" nav-dropdown=""><div change-size="0.5" class="c-nav_link c-nav_dropdown-trigger" nav-trigger=""><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Services</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Services</div></div></div><div class="c-nav-dropdown_cross-wrapper"><div class="c-nav-dropdown_line"></div><div class="c-nav-dropdown_line cc-rotate"></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></div><div class="c-nav_dropdown-content"><div><div class="c-nav_solutions"><a change-size="0.5" class="c-nav_link cc-solutions w-inline-block" href="ai-solutions.html"><div class="c-nav_link-preview cc-01"><img alt="AI Solutions" class="c-nav_link-preview-img" loading="lazy" src="../images/6867e5af4ce59d080b9ebf42_branding-big.webp"/></div><div class="c-nav_link-text"><div class="c-text-4">AI Solutions &amp; Automation</div><div class="c-text-4 cc-gray">Pre-built AI agents and automation workflows.</div></div></a><a change-size="0.5" class="c-nav_link cc-solutions w-inline-block" href="custom-development.html"><div class="c-nav_link-preview cc-02"><img alt="Custom Development" class="c-nav_link-preview-img" loading="lazy" src="../images/66c3bb125095523f5ce87a2a_9.webp"/></div><div class="c-nav_link-text"><div class="c-text-4">Custom Development</div><div class="c-text-4 cc-gray">Bespoke software that becomes your competitive moat.</div></div></a><a change-size="0.5" class="c-nav_link cc-solutions w-inline-block" href="ai-consulting.html"><div class="c-nav_link-preview cc-03"><img alt="AI Consulting" class="c-nav_link-preview-img" loading="lazy" src="../images/66c3bb13c9d1cdce681e0e73_10.webp"/></div><div class="c-nav_link-text"><div class="c-text-4">AI Consulting</div><div class="c-text-4 cc-gray">AI roadmap design and team training.</div></div></a></div></div></div></div><div class="c-nav_list_group cc-contact"><a change-size="0.5" data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:58caf455-987e-fc61-0c8a-9942ea693c50:cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="cccf0f75-3333-ad80-641f-1db576fe369b" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22cccf0f75-3333-ad80-641f-1db576fe369b%22%2C%22instanceId%22%3A%2258caf455-987e-fc61-0c8a-9942ea693c50%22%7D%5D" href="contact.html" class="c-nav_link home w-inline-block"><div class="c-nav-item_heading-wrap"><div class="c-nav-heading_wrap"><div class="c-heading-7 cc-regular">Contact</div></div><div class="c-nav-heading_wrap cc-repeat"><div class="c-heading-7 cc-regular">Contact</div></div></div><div class="c-underline-device-wrapper"><div class="c-underline-device cc-into"></div><div class="c-underline-device"></div></div></a></div></div><div class="c-nav_list_group mini-links"><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:c629fec7-ca5b-3333-f53a-8a6d897c3ce3:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%22c629fec7-ca5b-3333-f53a-8a6d897c3ce3%22%7D%5D" href="news.html" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>News &amp; Insights</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>News &amp; Insights</div></div></div></a><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:09f4a732-90d0-9ccf-8f67-69e72d30b5ea:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%2209f4a732-90d0-9ccf-8f67-69e72d30b5ea%22%7D%5D" href="#" target="_blank" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>LinkedIn</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>LinkedIn</div></div></div></a><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:2ac26e2d-29ea-d66b-6b16-cb011e4b29f0:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%222ac26e2d-29ea-d66b-6b16-cb011e4b29f0%22%7D%5D" href="#" target="_blank" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>Instagram</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>Instagram</div></div></div></a><a data-wf-native-id-path="3fd8449b-b2bb-4a5a-7533-39abc59f8274:b636134f-9ada-576c-fefb-ba442eca7095:748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65" data-wf-component-context="%5B%7B%22componentId%22%3A%228d359879-50c9-6d12-1f1e-f66080f24787%22%2C%22instanceId%22%3A%223fd8449b-b2bb-4a5a-7533-39abc59f8274%22%7D%2C%7B%22componentId%22%3A%22748c96f4-4c7b-70fc-e0c5-3c4ffbe97b65%22%2C%22instanceId%22%3A%22b636134f-9ada-576c-fefb-ba442eca7095%22%7D%5D" href="#" target="_blank" class="c-mini-link_wrapper w-inline-block"><div class="c-mini-link_text-list"><div class="c-mini-link_text-wrapper"><div>Twitter (X)</div></div><div class="c-mini-link_text-wrapper cc-repeat"><div>Twitter (X)</div></div></div></a></div></div></div></div><div class="css w-embed"><style>
 
   .c-navbar[nav-theme="dark"] .c-nav_brand-wrap {
     color: white;
@@ -786,137 +794,185 @@ _rc.parentElement.appendChild(_dc);
 window.addEventListener('pageshow', function(e) {
   if (e.persisted) location.reload();
 });
-</script></div></header></section><section white="" class="c-section"><div class="c-container"><div class="c-title02--gd1--cd12"><div class="c-title02_text--cd8--sd5"><h2 class="c-heading-3" style="text-align: center;">
-  Reclaim 20 Hours Weekly — Automate Your Business, Beat Competitors, Get Your Life Back
+</script></div></header></section><section white="" class="c-section"><div class="c-container"><div class="c-title02--gd1--cd12"><div class="c-title02_text--cd8--sd5"><h2 class="c-heading-3">
+  Reclaim 20+ Hours a Week. Automate What Slows You Down — Before Your Competitors Do.
 </h2>
 <style>
-.c-title02_text--cd8--sd5 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
 .c-title02_text--cd8--sd5 .c-heading-3 {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 100%;
   line-height: 1.3;
 }
 </style></div></div>
 
-<!-- Sub-headline for services -->
-<div style="text-align: center; margin-bottom: 3em;">
-  <p class="c-text-1" style="margin-top: 1em; color: #999; text-align: center;">
-    Choose your service and book your free consultation in under 60 seconds.
+<!-- Section heading -->
+<div style="text-align: center; margin-bottom: 2em;">
+  <h3 class="c-heading-3" style="font-size: 2.5em; line-height: 1.2;">What we do</h3>
+  <p class="c-text-1" style="margin-top: 0.5em; color: #999;">
+    Choose your service. Book a free consultation in under 60 seconds.
   </p>
 </div>
 
-<!-- Responsive service grid -->
-<div class="c-services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2em; margin-bottom: 3em;">
+<!-- Service rows -->
+<div class="c-services-rows" style="margin-bottom: 3em;">
 
-  <!-- AI Solutions Card -->
-  <div class="c-service-card" style="border: 1px solid #333; padding: 2em; border-radius: 8px; transition: all 0.3s ease;">
-    <div class="c-service-number" style="font-size: 3em; font-weight: 700; color: #FF0000; opacity: 0.2;">01</div>
-    <h3 class="c-heading-5">AI Solutions &amp; Automation</h3>
-    <p class="c-text-1" style="margin: 1em 0; min-height: 120px;">
-      Pre-built AI agents, automation workflows, and intelligent systems — deployed in days, not months.
-      320% revenue increase, zero R&amp;D tax.
-    </p>
-    <img class="c-row_img" src="../images/6867e5af4ce59d080b9ebf42_branding-big.webp"
-         alt="" asset-reveal="down" loading="lazy"
-         style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin: 1em 0;"
-         sizes="(max-width: 1920px) 100vw, 1920px"
-         srcset="../images/6867e5af4ce59d080b9ebf42_branding-big-p-500.webp 500w, ../images/6867e5af4ce59d080b9ebf42_branding-big-p-800.webp 800w, ../images/6867e5af4ce59d080b9ebf42_branding-big-p-1080.webp 1080w, ../images/6867e5af4ce59d080b9ebf42_branding-big-p-1600.webp 1600w, ../images/6867e5af4ce59d080b9ebf42_branding-big.webp 1920w"/>
-    <div class="c-btn-wrap" style="margin-top: 1.5em;">
-      <a href="ai-solutions.html" class="c-button cc-main cc-cta w-inline-block"
-         style="width: 100%; text-align: center; background: #FF0000; color: white; padding: 1em; border-radius: 4px; text-decoration: none; display: block;">
-        <div class="c-button_text-wrap">
-          <p no-animation="" class="c-text-1" style="margin: 0; color: white;">Book Free Strategy Call →</p>
-        </div>
-      </a>
+  <!-- AI Solutions Row -->
+  <div class="c-service-row">
+    <div class="c-service-row_title">
+      <span style="color: rgba(255,255,255,0.3); font-size: 0.85em;">01</span>
+      <h3 class="c-heading-5" style="margin-top: 0.25em;">AI Solutions &amp; Automation</h3>
+    </div>
+    <div class="c-service-row_desc">
+      <p class="c-text-1" style="color: #bbb;">
+        Pre-built AI agents, automation workflows, and intelligent systems — deployed in days, not months.
+        320% revenue increase, zero R&amp;D tax.
+      </p>
+      <a href="ai-solutions.html" class="c-service-row_link"><span class="c-service-row_link-text"><span>Learn more</span><span>Learn more</span></span><span class="c-service-row_link-arrow"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <div class="c-service-row_img">
+      <img src="../images/6867e5af4ce59d080b9ebf42_branding-big.webp" alt="AI Solutions" loading="lazy"
+           sizes="(max-width: 480px) 100vw, 280px"
+           srcset="../images/6867e5af4ce59d080b9ebf42_branding-big-p-500.webp 500w, ../images/6867e5af4ce59d080b9ebf42_branding-big-p-800.webp 800w"
+           style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px;" />
     </div>
   </div>
 
-  <!-- Custom Development Card -->
-  <div class="c-service-card" style="border: 1px solid #333; padding: 2em; border-radius: 8px; transition: all 0.3s ease;">
-    <div class="c-service-number" style="font-size: 3em; font-weight: 700; color: #FF0000; opacity: 0.2;">02</div>
-    <h3 class="c-heading-5">Custom Development</h3>
-    <p class="c-text-1" style="margin: 1em 0; min-height: 120px;">
-      Bespoke software that becomes your competitive moat. Web apps, APIs, database architecture —
-      built for your data, your workflows, your advantage.
-    </p>
-    <img class="c-row_img" src="../images/66c3bb125095523f5ce87a2a_9.webp"
-         alt="" asset-reveal="down" loading="lazy"
-         style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin: 1em 0;"
-         sizes="(max-width: 1920px) 100vw, 1920px"
-         srcset="../images/66c3bb125095523f5ce87a2a_9-p-500.webp 500w, ../images/66c3bb125095523f5ce87a2a_9-p-800.webp 800w, ../images/66c3bb125095523f5ce87a2a_9-p-1080.webp 1080w, ../images/66c3bb125095523f5ce87a2a_9.webp 1920w"/>
-    <div class="c-btn-wrap" style="margin-top: 1.5em;">
-      <a href="custom-development.html" class="c-button cc-main cc-cta w-inline-block"
-         style="width: 100%; text-align: center; background: #FF0000; color: white; padding: 1em; border-radius: 4px; text-decoration: none; display: block;">
-        <div class="c-button_text-wrap">
-          <p no-animation="" class="c-text-1" style="margin: 0; color: white;">Schedule Consultation →</p>
-        </div>
-      </a>
+  <!-- Custom Development Row -->
+  <div class="c-service-row">
+    <div class="c-service-row_title">
+      <span style="color: rgba(255,255,255,0.3); font-size: 0.85em;">02</span>
+      <h3 class="c-heading-5" style="margin-top: 0.25em;">Custom Development</h3>
+    </div>
+    <div class="c-service-row_desc">
+      <p class="c-text-1" style="color: #bbb;">
+        Bespoke software that becomes your competitive moat. Web apps, APIs, database architecture —
+        built for your data, your workflows, your advantage.
+      </p>
+      <a href="custom-development.html" class="c-service-row_link"><span class="c-service-row_link-text"><span>Learn more</span><span>Learn more</span></span><span class="c-service-row_link-arrow"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <div class="c-service-row_img">
+      <img src="../images/66c3bb125095523f5ce87a2a_9.webp" alt="Custom Development" loading="lazy"
+           sizes="(max-width: 480px) 100vw, 280px"
+           srcset="../images/66c3bb125095523f5ce87a2a_9-p-500.webp 500w, ../images/66c3bb125095523f5ce87a2a_9-p-800.webp 800w"
+           style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px;" />
     </div>
   </div>
 
-  <!-- AI Consulting Card -->
-  <div class="c-service-card" style="border: 1px solid #333; padding: 2em; border-radius: 8px; transition: all 0.3s ease;">
-    <div class="c-service-number" style="font-size: 3em; font-weight: 700; color: #FF0000; opacity: 0.2;">03</div>
-    <h3 class="c-heading-5">AI Consulting</h3>
-    <p class="c-text-1" style="margin: 1em 0; min-height: 120px;">
-      From use-case identification to production deployment. We audit your operations, design your AI roadmap,
-      and train your team. Zero AI theater.
-    </p>
-    <img class="c-row_img" src="../images/66c3bb13c9d1cdce681e0e73_10.webp"
-         alt="" asset-reveal="down" loading="lazy"
-         style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin: 1em 0;"
-         sizes="(max-width: 1920px) 100vw, 1920px"
-         srcset="../images/66c3bb13c9d1cdce681e0e73_10-p-500.webp 500w, ../images/66c3bb13c9d1cdce681e0e73_10-p-800.webp 800w, ../images/66c3bb13c9d1cdce681e0e73_10-p-1080.webp 1080w, ../images/66c3bb13c9d1cdce681e0e73_10-p-1600.webp 1600w, ../images/66c3bb13c9d1cdce681e0e73_10.webp 1920w"/>
-    <div class="c-btn-wrap" style="margin-top: 1.5em;">
-      <a href="ai-consulting.html" class="c-button cc-main cc-cta w-inline-block"
-         style="width: 100%; text-align: center; background: #FF0000; color: white; padding: 1em; border-radius: 4px; text-decoration: none; display: block;">
-        <div class="c-button_text-wrap">
-          <p no-animation="" class="c-text-1" style="margin: 0; color: white;">Get Free Audit →</p>
-        </div>
-      </a>
+  <!-- AI Consulting Row -->
+  <div class="c-service-row">
+    <div class="c-service-row_title">
+      <span style="color: rgba(255,255,255,0.3); font-size: 0.85em;">03</span>
+      <h3 class="c-heading-5" style="margin-top: 0.25em;">AI Consulting</h3>
+    </div>
+    <div class="c-service-row_desc">
+      <p class="c-text-1" style="color: #bbb;">
+        From use-case identification to production deployment. We audit your operations, design your AI roadmap,
+        and train your team. Zero AI theater.
+      </p>
+      <a href="ai-consulting.html" class="c-service-row_link"><span class="c-service-row_link-text"><span>Learn more</span><span>Learn more</span></span><span class="c-service-row_link-arrow"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <div class="c-service-row_img">
+      <img src="../images/66c3bb13c9d1cdce681e0e73_10.webp" alt="AI Consulting" loading="lazy"
+           sizes="(max-width: 480px) 100vw, 280px"
+           srcset="../images/66c3bb13c9d1cdce681e0e73_10-p-500.webp 500w, ../images/66c3bb13c9d1cdce681e0e73_10-p-800.webp 800w"
+           style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px;" />
     </div>
   </div>
+
 </div>
 
-<!-- Service card animations CSS -->
+<!-- Service rows CSS -->
 <style>
-.c-service-card {
-  transition: all 0.3s ease;
+.c-services-rows { max-width: 100%; }
+.c-service-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2em;
+  padding: 2.5em 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  align-items: start;
+}
+.c-service-row:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+/* Service row hover — image reveal */
+.c-service-row {
+  transition: background-color 0.4s ease;
+}
+.c-service-row:hover {
+  background-color: rgba(255,255,255,0.03);
+}
+.c-service-row_img img {
+  transition: transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+.c-service-row:hover .c-service-row_img img {
+  transform: scale(1.05);
 }
 
-.c-service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(255, 0, 0, 0.1);
-  border-color: #FF0000 !important;
+/* Learn more — Refokus-style text slide */
+.c-service-row_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-top: 1em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95em;
+  overflow: hidden;
 }
-
-.c-service-number {
-  transition: all 0.3s ease;
+.c-service-row_link-text {
+  display: inline-flex;
+  flex-direction: column;
+  height: 1.3em;
+  overflow: hidden;
 }
-
-.c-service-card:hover .c-service-number {
-  opacity: 0.6 !important;
-  transform: scale(1.1);
+.c-service-row_link-text span {
+  display: block;
+  transition: transform 0.5s cubic-bezier(.16,1,.3,1);
+  line-height: 1.3;
 }
-
-/* Responsive grid */
+.c-service-row_link:hover .c-service-row_link-text span {
+  transform: translateY(-100%);
+}
+.c-service-row_link-arrow {
+  display: inline-flex;
+  transition: transform 0.5s cubic-bezier(.16,1,.3,1);
+}
+.c-service-row_link:hover .c-service-row_link-arrow {
+  transform: translateX(6px);
+}
+/* Underline animation */
+.c-service-row_link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(.16,1,.3,1);
+}
+.c-service-row_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.c-service-row_link {
+  position: relative;
+}
 @media (max-width: 768px) {
-  .c-services-grid {
-    grid-template-columns: 1fr !important;
+  .c-service-row {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1.5em 0;
   }
-
-  .c-service-card {
-    margin-bottom: 1.5em;
+  .c-service-row_img {
+    order: -1;
   }
 }
 </style>
 
-</div></section><section white="" class="c-section"><div simple-blur="" class="c-logos"><div class="c-container"></div><div r-marquee="60" class="c-marquee_outer"><div class="c-marquee-wrap w-dyn-list"><div role="list" class="c-marquee w-dyn-items"><div role="listitem" class="w-dyn-item"><img src="../images/666359b850995827afaa8db4_633c148b9b819badd7bbcde8_627a8d3e69e23713762e6b34_Vector.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359ba3497cf06ff9e8f71_633c14899b819b7aafbbcde1_627a8da607be73fd13e76134_basf.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b9b2d3d56a1d071ef8_633c148a12c2cf0d8c755473_61957d908c68e7c692fe642e_haufe.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359bafc1c77261cbab22d_633c148a8b25dcfcd2e387b2_61957e512832dbf5efe8cdc6_mural.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b97202d2e093f2a48876a_goologo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b842910de1189f26accda_jologo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b89a37dd20bc1a6b9c8da_deelogo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b7bf9533879784a0cf5fa_logo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d485bb37c8fc880cdfad_bcgp-1.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d4ed1253edc0166ecbad_Lavendar-logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d300a4cce143f24735d3_sevdesk-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/67461a791f752d7eb2b20280_Keystone-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b597d53302df1b88f5_660191f0bd52de169c0dbc94_Logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6666ed38989e70633b7658b5_Singularity_logo.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6696b1b881b51b8bea94556c_Logo-lockup-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6694f0ff430a1585cff47451_botify-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/66979aab7dc661744003a210_logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b5306b05c2b704224d_65b2ca264ed8d89bad9b331c_Logo%2520Black%25201.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d8e7a169e0b41018de63_Intesneye-logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b62de955b9aa4d2ddb_64868958b0d3ba04534cc3b3_Silvr_logo_black.png" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b8724afca0a36e7e8d_633c148cf63c4467416f9bea_61ee848c05ba9c9caff5fd64_yahoo.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div></div></div></div></div></section><section bg-to-pink="0" showcase="section" class="c-section cc-dark cc-bp-0 cc-bt-0"><div class="portfolio-wrap"><div class="css w-embed"><style>
+</div></section><section white="" class="c-section" style="padding-top: 0.5em !important; padding-bottom: 0.5em !important;"><div simple-blur="" class="c-logos"><div class="c-container"></div><div r-marquee="60" class="c-marquee_outer"><div class="c-marquee-wrap w-dyn-list"><div role="list" class="c-marquee w-dyn-items"><div role="listitem" class="w-dyn-item"><img src="../images/666359b850995827afaa8db4_633c148b9b819badd7bbcde8_627a8d3e69e23713762e6b34_Vector.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359ba3497cf06ff9e8f71_633c14899b819b7aafbbcde1_627a8da607be73fd13e76134_basf.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b9b2d3d56a1d071ef8_633c148a12c2cf0d8c755473_61957d908c68e7c692fe642e_haufe.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359bafc1c77261cbab22d_633c148a8b25dcfcd2e387b2_61957e512832dbf5efe8cdc6_mural.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b97202d2e093f2a48876a_goologo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b842910de1189f26accda_jologo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b89a37dd20bc1a6b9c8da_deelogo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/679b7bf9533879784a0cf5fa_logo-onLight.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d485bb37c8fc880cdfad_bcgp-1.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d4ed1253edc0166ecbad_Lavendar-logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d300a4cce143f24735d3_sevdesk-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/67461a791f752d7eb2b20280_Keystone-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b597d53302df1b88f5_660191f0bd52de169c0dbc94_Logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6666ed38989e70633b7658b5_Singularity_logo.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6696b1b881b51b8bea94556c_Logo-lockup-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6694f0ff430a1585cff47451_botify-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/66979aab7dc661744003a210_logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b5306b05c2b704224d_65b2ca264ed8d89bad9b331c_Logo%2520Black%25201.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/6697d8e7a169e0b41018de63_Intesneye-logo-black.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b62de955b9aa4d2ddb_64868958b0d3ba04534cc3b3_Silvr_logo_black.png" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div><div role="listitem" class="w-dyn-item"><img src="../images/666359b8724afca0a36e7e8d_633c148cf63c4467416f9bea_61ee848c05ba9c9caff5fd64_yahoo.svg" loading="lazy" width="114" height="32" alt="" class="c-marquee_logo"/></div></div></div></div></div></section><section bg-to-pink="0" showcase="section" class="c-section cc-dark cc-bp-0 cc-bt-0"><div class="portfolio-wrap"><div class="css w-embed"><style>
 
 .c-project-item:hover .portfolio_bg{
 	opacity:1;
@@ -1008,46 +1064,137 @@ Your browser does not support the video tag.
 <rect width="100%" height="1" fill="currentColor"/>
 </svg></div><div class="c-button_line cc-1px w-embed"><svg width="100%" height="1" viewBox="0 0 1000 1" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="100%" height="1" fill="currentColor"/>
-</svg></div></div></a></div><div id="w-node-_0be0d4a8-2e07-c74b-0b12-a0edca66fad0-509197e5" class="portfolio_categories"><div class="portfolio_categories_flex"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><h3 r-indexed="tag" class="c-overhead cc-work-white">AI Integration</h3></div><div role="listitem" class="w-dyn-item"><h3 r-indexed="tag" class="c-overhead cc-work-white">Custom Apps</h3></div><div role="listitem" class="w-dyn-item"><h3 r-indexed="tag" class="c-overhead cc-work-white">Automation</h3></div></div></div><div class="c-overhead cc-desktop">US</div></div></div></div></div><div class="c-project_line"></div></div></article></div></div></section><section white="" class="c-section"><div class="c-container"><div class="c-title02--gd1--cd12"><div class="c-title02_tags--cd3 cc-smaller"><div class="c-tags cc-purple"><div class="c-overhead">•</div><div class="c-overhead">testimonials</div><div class="c-overhead">/</div></div></div><div class="c-title02_text--cd8--sd5" style="text-align: center;"><h2 class="c-heading-3">Working with Douro Digital</h2></div></div><div class="c-line cc-dark"></div><div class="c-testimonial--gd1--cd12"><div class="c-grid_item--cd3 cc-cta cc-hide-tablet"><p class="c-text-1">Take a deeper look at what we do for our clients and partners.</p><div class="c-cta-wrapper cc-24"><a color="no" data-wf-native-id-path="c14417a8-0729-801b-3dcb-6e932bcafd51:7b24e8bd-c528-aa06-5c47-bfd075d4b976" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="7b24e8bd-c528-aa06-5c47-bfd075d4b976" data-wf-component-context="%5B%7B%22componentId%22%3A%227b24e8bd-c528-aa06-5c47-bfd075d4b976%22%2C%22instanceId%22%3A%22c14417a8-0729-801b-3dcb-6e932bcafd51%22%7D%5D" href="work.html" class="c-button cc-main w-inline-block"><div class="c-button_text-wrap"><p no-animation="" class="c-text-1">Portfolio</p></div><div class="c-button_arrow-wrap"><div class="c-button_embed-left w-embed"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div><div class="c-button_embed w-embed"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div></div><div class="c-line_overflow"><div class="c-button_line-left w-embed"><svg width="100%" height="1" viewBox="0 0 1000 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="100%" height="1" fill="currentColor"/>
-</svg></div><div class="c-button_line cc-1px w-embed"><svg width="100%" height="1" viewBox="0 0 1000 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="100%" height="1" fill="currentColor"/>
-</svg></div></div></a></div></div><div class="c-quotes_item--cd6--sd5"><div><div class="c-custom-code w-embed"><style>
+</svg></div></div></a></div><div id="w-node-_0be0d4a8-2e07-c74b-0b12-a0edca66fad0-509197e5" class="portfolio_categories"><div class="portfolio_categories_flex"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><h3 r-indexed="tag" class="c-overhead cc-work-white">AI Integration</h3></div><div role="listitem" class="w-dyn-item"><h3 r-indexed="tag" class="c-overhead cc-work-white">Custom Apps</h3></div><div role="listitem" class="w-dyn-item"><h3 r-indexed="tag" class="c-overhead cc-work-white">Automation</h3></div></div></div><div class="c-overhead cc-desktop">US</div></div></div></div></div><div class="c-project_line"></div></div></article></div></div></section>
+
+<section white="" class="c-section"><div class="c-container"><div class="c-title02--gd1--cd12"><div class="c-title02_tags--cd3 cc-smaller"><div class="c-tags cc-purple"><div class="c-overhead">•</div><div class="c-overhead">testimonials</div><div class="c-overhead">/</div></div></div><div class="c-title02_text--cd8--sd5" style="text-align: center;"><h2 class="c-heading-3">Working with Douro Digital</h2></div></div><div class="c-line cc-dark"></div><div class="c-testimonial--gd1--cd12"><div class="c-grid_item--cd3 cc-cta cc-hide-tablet"><p class="c-text-1">Take a deeper look at what we do for our clients and partners.</p><div class="c-cta-wrapper cc-24"><a color="no" href="work.html" class="c-button cc-main w-inline-block"><div class="c-button_text-wrap"><p no-animation="" class="c-text-1">Portfolio</p></div><div class="c-button_arrow-wrap"><div class="c-button_embed-left w-embed"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="c-button_embed w-embed"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6.5L12 1.5M17 6.5L12 11.5M17 6.5L1 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div><div class="c-line_overflow"><div class="c-button_line-left w-embed"><svg width="100%" height="1" viewBox="0 0 1000 1" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="1" fill="currentColor"/></svg></div><div class="c-button_line cc-1px w-embed"><svg width="100%" height="1" viewBox="0 0 1000 1" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="1" fill="currentColor"/></svg></div></div></a></div></div><div class="c-grid_item--cd9 cc-testimonial-col"><div class="c-custom-code w-embed"><style>
   [testimonials-dots] .slick-dots {
-    padding: 0;
-    list-style: none;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    padding: 0;
+    list-style: none;
   }
-
   [testimonials-dots] .slick-dots li {
-    width: 2px;
-    content: '';
-    color: transparent;
-    background-color: #323237;
-    border-radius: 2px;
+    width: 3px;
     height: 18px;
-    transition: all .3s ease;
+    border-radius: 2px;
+    background-color: #323237;
+    transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+    cursor: pointer;
   }
-
   [testimonials-dots] .slick-dots li.slick-active {
-    background-color: #8F8F95;
+    background-color: #FF3322;
     height: 40px;
   }
-
   [testimonials-dots] .slick-dots button {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
+    display: none;
   }
+</style></div><div class="c-home-testimonials_wrapper"><div testimonials-dots=""></div><div class="c-home-testimonials w-dyn-list"><div testimonials-slider="" role="list" class="c-home-testimonials_list w-dyn-items"><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" src="../images/667ae964fcd573a2a10160dc_1646153912707.webp" sizes="(max-width: 991px) 100vw, 50vw" srcset="../images/667ae964fcd573a2a10160dc_1646153912707-p-500.webp 500w, ../images/667ae964fcd573a2a10160dc_1646153912707.webp 800w" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">Douro Digital built us an AI-powered lead qualification system that increased our conversion rate by 40%. Their team understood our sales process deeply and delivered beyond expectations.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Ron Rofé</div><div class="c-text-4">TechScale Solutions</div></div></div></div></div><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" src="../images/667ae8a26688ee7fc5b9550c_1695057471482.webp" sizes="(max-width: 991px) 100vw, 50vw" srcset="../images/667ae8a26688ee7fc5b9550c_1695057471482-p-500.webp 500w, ../images/667ae8a26688ee7fc5b9550c_1695057471482.webp 800w" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">They automated our entire onboarding workflow in weeks. What used to take our team 4 hours per client now runs in minutes with zero errors.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Moritz Spranger</div><div class="c-text-4">Cula</div></div></div></div></div><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" src="../images/667ae8e32f13725553690e91_6564a71eafd6c0c2a1a49006_0.webp" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">Douro Digital integrated AI agents across our customer support and internal ops. Response times dropped 80% and our team finally focuses on high-value work instead of repetitive tasks.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Katie Kearsey</div><div class="c-text-4">Meridian Health</div></div></div></div></div><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" src="../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01.webp" sizes="(max-width: 991px) 100vw, 50vw" srcset="../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-500.webp 500w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-800.webp 800w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-1080.webp 1080w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-1600.webp 1600w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-2000.webp 2000w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01.webp 2286w" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">Douro Digital was efficient and proactive in achieving quality results. The final output was well made and created a huge impact with regards to brand awareness for our brand. The experience also managed to bag several awards and was mentioned during the keynote of Tech Conf. Douro Digital' response timing was always on point as well.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Eugene Ernoult</div><div class="c-text-4">SecureVault Inc.</div></div></div></div></div></div></div></div></div></div></div></div>
+<script>
+// Destroy broken Slick fade and replace with custom fade carousel
+(function fixTestimonials() {
+  var retries = 0;
+  function init() {
+    var el = document.querySelector('[testimonials-slider]');
+    if (!el) { setTimeout(init, 200); return; }
+    // Wait for Slick to init so we can destroy it (max 3 retries)
+    if (el.classList.contains('slick-initialized')) {
+      try { jQuery(el).slick('unslick'); } catch(e) {}
+    } else if (typeof jQuery !== 'undefined' && retries < 3) {
+      retries++;
+      setTimeout(init, 300); return;
+    }
+    // Clear all inline styles left by Slick/GSAP
+    el.removeAttribute('style');
+    el.classList.remove('slick-initialized','slick-slider','slick-dotted');
+    var items = el.querySelectorAll('.c-home-testimonial');
+    // Setup fade carousel
+    el.style.position = 'relative';
+    // Make parent wrapper relative for dot positioning
+    var wrapper = el.closest('.c-home-testimonials_wrapper');
+    if (wrapper) wrapper.style.position = 'relative';
+    var maxH = 0;
+    items.forEach(function(item) {
+      item.removeAttribute('class');
+      // Measure natural height
+      item.style.cssText = 'position:relative;width:100%;';
+      if (item.offsetHeight > maxH) maxH = item.offsetHeight;
+      item.style.cssText = 'position:absolute;top:0;left:0;width:100%;opacity:0;visibility:hidden;transition:opacity 0.6s ease, visibility 0s 0.6s;pointer-events:none;';
+    });
+    el.style.height = maxH + 'px';
+    el.style.overflow = 'hidden';
 
-</style></div><div class="c-home-testimonials_wrapper"><div testimonials-dots=""></div><div class="c-home-testimonials w-dyn-list"><div testimonials-slider="" role="list" class="c-home-testimonials_list w-dyn-items"><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" asset-reveal="right" src="../images/667ae964fcd573a2a10160dc_1646153912707.webp" sizes="(max-width: 991px) 100vw, 50vw" srcset="../images/667ae964fcd573a2a10160dc_1646153912707-p-500.webp 500w, ../images/667ae964fcd573a2a10160dc_1646153912707.webp 800w" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">Douro Digital built us an AI-powered lead qualification system that increased our conversion rate by 40%. Their team understood our sales process deeply and delivered beyond expectations.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Ron Rofé</div><div class="c-text-4">TechScale Solutions</div></div></div></div></div><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" asset-reveal="right" src="../images/667ae8a26688ee7fc5b9550c_1695057471482.webp" sizes="(max-width: 991px) 100vw, 50vw" srcset="../images/667ae8a26688ee7fc5b9550c_1695057471482-p-500.webp 500w, ../images/667ae8a26688ee7fc5b9550c_1695057471482.webp 800w" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">They automated our entire onboarding workflow in weeks. What used to take our team 4 hours per client now runs in minutes with zero errors.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Moritz Spranger</div><div class="c-text-4">Cula</div></div></div></div></div><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" asset-reveal="right" src="../images/667ae8e32f13725553690e91_6564a71eafd6c0c2a1a49006_0.webp" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">Douro Digital integrated AI agents across our customer support and internal ops. Response times dropped 80% and our team finally focuses on high-value work instead of repetitive tasks.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Katie Kearsey</div><div class="c-text-4">Meridian Health</div></div></div></div></div><div role="listitem" class="c-home-testimonial w-dyn-item"><div class="c-testimonial_wrapper"><div class="c-home-testimonial_image-wrapper cc-contact"><img alt="" loading="lazy" asset-reveal="right" src="../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01.webp" sizes="(max-width: 991px) 100vw, 50vw" srcset="../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-500.webp 500w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-800.webp 800w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-1080.webp 1080w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-1600.webp 1600w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01-p-2000.webp 2000w, ../images/667ae8f98e07e4a0fc971c5d_651434df8ac15a6b417c94bb_Eugene_01.webp 2286w" class="c-home-testimonial_image"/></div><div class="c-home-testimonial_content"><p class="c-text-1">Douro Digital was efficient and proactive in achieving quality results. The final output was well made and created a huge impact with regards to brand awareness for our brand. The experience also managed to bag several awards and was mentioned during the keynote of Tech Conf. Douro Digital’ response timing was always on point as well.</p><div class="c-home-testimonial_info"><div class="c-text-3 cc-medium">Eugene Ernoult</div><div class="c-text-4">SecureVault Inc.</div></div></div></div></div></div></div></div></div></div></div></div></section><div fs-consent-element="internal-component" class="fs-consent_component"><div fs-consent-easing="ease" fs-consent-element="banner" fs-consent-animation="fade" fs-consent-duration="300" class="fs-consent_banner"><div class="fs-consent_banner_wrapper"><p class="c-text-3">This website use Cookies.</p><div fs-consent-element="internal-buttons-wrapper" class="fs-consent_banner_buttons"><a fs-consent-element="open-preferences" data-wf-native-id-path="a06ee998-4450-077e-181a-9be499ce2084" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="a06ee998-4450-077e-181a-9be499ce2084" href="#" class="fs-consent_prefs_link">Preferences</a><a fs-consent-element="deny" data-wf-native-id-path="4fdcecfd-a238-c17c-9d5b-40fe1ddebaf5" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="4fdcecfd-a238-c17c-9d5b-40fe1ddebaf5" href="#" class="fs-consent_decline w-button">Reject</a><a fs-consent-element="allow" data-wf-native-id-path="b7fbe9b9-72ac-a4f3-3ad7-f3056dde9e68" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="b7fbe9b9-72ac-a4f3-3ad7-f3056dde9e68" href="#" class="fs-consent_allow w-button">Accept</a></div></div></div><div fs-consent-easing="ease" fs-consent-element="preferences" fs-consent-scroll="disable" fs-consent-animation="fade" fs-consent-duration="300" class="fs-consent_prefs"><div class="fs-consent_prefs_wrapper"><div class="fs-consent_prefs_form-block w-form"><form id="email-form" name="email-form" data-name="Email Form" method="get" fs-consent-element="form" class="fs-consent_prefs_form" data-wf-page-id="664dc8b6bc52b504509197e5" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6ab"><div class="fs-consent_prefs_popup"><div class="fs-consent_prefs_header"><div class="fs-consent_prefs_heading"><strong>Manage Consent Preferences by Category</strong></div></div><div fs-consent-element="internal-categories-wrapper" class="fs-consent_prefs_list"><div fs-consent-element="internal-category-essential" class="fs-consent_prefs_option"><div class="fs-consent_checkbox_field"><div class="fs-consent_checkbox_label">Essentials</div><div><strong>Always active</strong></div></div><p class="fs-consent_prefs_description">Necessary for the site to function. Always On.<br/></p></div><div fs-consent-element="internal-category-marketing" class="fs-consent_prefs_option"><label data-wf-native-id-path="935db9ba-56b0-d2de-a5ca-249ce706ccc3" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="935db9ba-56b0-d2de-a5ca-249ce706ccc3" class="w-checkbox fs-consent_checkbox_field-2"><div class="w-checkbox-input w-checkbox-input--inputType-custom fs-consent_checkbox"></div><input type="checkbox" name="marketing" id="marketing" data-name="Marketing" fs-consent-element="checkbox-marketing" style="opacity:0;position:absolute;z-index:-1"/><span for="marketing" class="fs-consent_checkbox_label w-form-label">Marketing</span></label><p class="fs-consent_prefs_description">Used for targeted advertising.<br/></p></div><div fs-consent-element="internal-category-personalization" class="fs-consent_prefs_option"><label data-wf-native-id-path="5bb4bfd6-4dcf-dc9d-2cca-8e7e42cb9c23" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="5bb4bfd6-4dcf-dc9d-2cca-8e7e42cb9c23" class="w-checkbox fs-consent_checkbox_field-2"><div class="w-checkbox-input w-checkbox-input--inputType-custom fs-consent_checkbox"></div><input type="checkbox" name="personalization" id="personalization" data-name="Personalization" fs-consent-element="checkbox-personalization" style="opacity:0;position:absolute;z-index:-1"/><span for="personalization" class="fs-consent_checkbox_label w-form-label">Personalization</span></label><p class="fs-consent_prefs_description">Remembers your preferences and provides enhanced features.<br/></p></div><div fs-consent-element="internal-category-analytics" class="fs-consent_prefs_option"><label data-wf-native-id-path="004cec7a-1d7e-7299-bf50-501c805f0603" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="004cec7a-1d7e-7299-bf50-501c805f0603" class="w-checkbox fs-consent_checkbox_field-2"><div class="w-checkbox-input w-checkbox-input--inputType-custom fs-consent_checkbox"></div><input type="checkbox" name="analytics" id="analytics" data-name="Analytics" fs-consent-element="checkbox-analytics" style="opacity:0;position:absolute;z-index:-1"/><span for="analytics" class="fs-consent_checkbox_label w-form-label">Analytics</span></label><p class="fs-consent_prefs_description">Measures usage and improves your experience.<br/></p></div></div><div class="fs-consent_prefs_buttons"><a fs-consent-element="deny" data-wf-native-id-path="38172817-ba32-efca-c1d8-d20a3ff5d6b3" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6b3" href="#" class="fs-consent_decline w-button">Reject All</a><a fs-consent-element="allow" data-wf-native-id-path="38172817-ba32-efca-c1d8-d20a3ff5d6b5" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6b5" href="#" class="fs-consent_allow w-button">Accept All</a><input type="submit" data-wait="Please wait..." data-wf-native-id-path="38172817-ba32-efca-c1d8-d20a3ff5d6b7" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6b7" class="fs-consent_prefs_submit w-button" value="Save Preferences"/></div><div fs-consent-element="close" class="fs-consent_prefs_close"><div class="fs-consent_prefs_close-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path id="icon" d="M3.41424 2.25L2.00003 3.66421L6.58582 8.25L1.99988 12.8359L3.41409 14.2502L8.00003 9.66421L12.5854 14.2496L13.9996 12.8354L9.41424 8.25L13.9995 3.66476L12.5853 2.25055L8.00003 6.83579L3.41424 2.25Z" fill="currentColor"></path></g></svg></div></div></div></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div fs-consent-element="close" class="fs-consent_prefs_overlay"></div></div></div><div fs-consent-easing="ease" fs-consent-element="fixed-preferences" fs-consent-animation="fade" fs-consent-duration="300" class="fs-consent_open-prefs"><div fs-consent-element="open-preferences" class="fs-consent_open-prefs_wrapper"><div class="fs-consent_open-prefs_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 29 28" fill="none"><rect x="0.635254" fill="none"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M20.377 4.2453C20.9009 4.2453 21.3264 4.67081 21.3264 5.19476C21.3264 5.7187 20.9009 6.14421 20.377 6.14421C19.853 6.14421 19.4275 5.7187 19.4275 5.19476C19.4291 4.67081 19.853 4.2453 20.377 4.2453ZM20.631 12.5141C21.4503 13.7367 22.4871 14.1114 23.8335 13.2842C23.8779 13.7446 23.889 14.2146 23.8652 14.6909C23.6001 19.9558 19.1179 24.0092 13.853 23.7441C8.58975 23.4774 4.53631 18.9952 4.80146 13.7319C5.06502 8.46705 9.70275 4.36914 14.966 4.63429C14.4992 6.09499 14.8946 7.39216 16.0822 7.83355C15.0057 11.2916 17.4095 13.5541 20.631 12.5141ZM9.55668 11.833C10.3458 11.833 10.984 12.4729 10.984 13.2604C10.984 14.0479 10.3442 14.6877 9.55668 14.6877C8.76758 14.6877 8.12932 14.0479 8.12932 13.2604C8.12932 12.4729 8.76917 11.833 9.55668 11.833ZM14.0531 13.6525C14.5072 13.6525 14.8755 14.0209 14.8755 14.475C14.8755 14.9291 14.5072 15.2974 14.0531 15.2974C13.599 15.2974 13.2307 14.9291 13.2307 14.475C13.2291 14.0209 13.5974 13.6525 14.0531 13.6525ZM10.4839 17.0407C11.038 17.0407 11.4873 17.4901 11.4873 18.0442C11.4873 18.5983 11.038 19.0476 10.4839 19.0476C9.92979 19.0476 9.48047 18.5983 9.48047 18.0442C9.48047 17.4885 9.92979 17.0407 10.4839 17.0407ZM12.6464 9.36252C13.0814 9.36252 13.4323 9.715 13.4323 10.1484C13.4323 10.5835 13.0798 10.9344 12.6464 10.9344C12.2113 10.9344 11.8605 10.5819 11.8605 10.1484C11.8605 9.715 12.2129 9.36252 12.6464 9.36252ZM16.9173 17.3916C17.6461 17.3916 18.2352 17.9823 18.2352 18.7094C18.2352 19.4382 17.6445 20.0272 16.9173 20.0272C16.1886 20.0272 15.5995 19.4366 15.5995 18.7094C15.5995 17.9823 16.1902 17.3916 16.9173 17.3916ZM19.6927 7.91293C20.1817 7.91293 20.5786 8.30986 20.5786 8.79888C20.5786 9.2879 20.1817 9.68483 19.6927 9.68483C19.2037 9.68483 18.8067 9.2879 18.8067 8.79888C18.8067 8.30986 19.2037 7.91293 19.6927 7.91293Z" fill="currentColor"></path></svg></div></div></div></div></div><nav no-animation=""><section><div class="c-custom-code w-embed"><style>
+    // Strip GSAP SplitText wrappers — restore plain text
+    items.forEach(function(item) {
+      var texts = item.querySelectorAll('.c-text-1, .c-text-3, .c-text-4');
+      texts.forEach(function(t) {
+        t.textContent = t.textContent;
+        t.removeAttribute('style');
+      });
+    });
+
+    var current = 0;
+    items[0].style.opacity = '1';
+    items[0].style.visibility = 'visible';
+    items[0].style.transition = 'opacity 0.6s ease';
+    items[0].style.pointerEvents = 'auto';
+    // Set initial slide-up state for first image
+    var firstImg = items[0].querySelector('.c-home-testimonial_image-wrapper');
+    if (firstImg) firstImg.style.transform = 'translateY(0)';
+
+    // Build vertical bar indicators
+    var dotsWrap = document.querySelector('[testimonials-dots]');
+    if (dotsWrap) {
+      dotsWrap.innerHTML = '';
+      dotsWrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:5px;position:absolute;right:-60px;top:50%;transform:translateY(-50%);z-index:10;';
+      items.forEach(function(item, i) {
+        var dot = document.createElement('button');
+        dot.style.cssText = 'width:3px;height:18px;border-radius:2px;background-color:#323237;cursor:pointer;padding:0;border:none;transition:all 0.4s cubic-bezier(0.22,1,0.36,1);';
+        if (i === 0) { dot.style.backgroundColor = '#FF3322'; dot.style.height = '40px'; }
+        dot.addEventListener('click', function() { goTo(i); });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function goTo(n) {
+      // Reset outgoing image
+      var outImg = items[current].querySelector('.c-home-testimonial_image-wrapper');
+      if (outImg) { outImg.style.transition = 'none'; outImg.style.transform = 'translateY(40px)'; }
+      items[current].style.opacity = '0';
+      items[current].style.visibility = 'hidden';
+      items[current].style.transition = 'opacity 0.6s ease, visibility 0s 0.6s';
+      items[current].style.pointerEvents = 'none';
+      if (dotsWrap && dotsWrap.children[current]) { dotsWrap.children[current].style.backgroundColor = '#323237'; dotsWrap.children[current].style.height = '18px'; }
+      current = n;
+      items[current].style.opacity = '1';
+      items[current].style.visibility = 'visible';
+      items[current].style.transition = 'opacity 0.6s ease';
+      items[current].style.pointerEvents = 'auto';
+      if (dotsWrap && dotsWrap.children[current]) { dotsWrap.children[current].style.backgroundColor = '#FF3322'; dotsWrap.children[current].style.height = '40px'; }
+      // Slide-up incoming image
+      var inImg = items[current].querySelector('.c-home-testimonial_image-wrapper');
+      if (inImg) {
+        inImg.style.transition = 'none';
+        inImg.style.transform = 'translateY(40px)';
+        inImg.offsetHeight; // force reflow
+        inImg.style.transition = 'transform 0.7s cubic-bezier(0.22,1,0.36,1)';
+        inImg.style.transform = 'translateY(0)';
+      }
+    }
+
+    // Autoplay
+    var timer = setInterval(function() { goTo((current + 1) % items.length); }, 5000);
+    el.addEventListener('mouseenter', function() { clearInterval(timer); });
+    el.addEventListener('mouseleave', function() {
+      timer = setInterval(function() { goTo((current + 1) % items.length); }, 5000);
+    });
+  }
+  if (document.readyState === 'complete') setTimeout(init, 500);
+  else window.addEventListener('load', function() { setTimeout(init, 500); });
+})();
+</script>
+</section><div fs-consent-element="internal-component" class="fs-consent_component"><div fs-consent-easing="ease" fs-consent-element="banner" fs-consent-animation="fade" fs-consent-duration="300" class="fs-consent_banner"><div class="fs-consent_banner_wrapper"><p class="c-text-3">This website use Cookies.</p><div fs-consent-element="internal-buttons-wrapper" class="fs-consent_banner_buttons"><a fs-consent-element="open-preferences" data-wf-native-id-path="a06ee998-4450-077e-181a-9be499ce2084" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="a06ee998-4450-077e-181a-9be499ce2084" href="#" class="fs-consent_prefs_link">Preferences</a><a fs-consent-element="deny" data-wf-native-id-path="4fdcecfd-a238-c17c-9d5b-40fe1ddebaf5" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="4fdcecfd-a238-c17c-9d5b-40fe1ddebaf5" href="#" class="fs-consent_decline w-button">Reject</a><a fs-consent-element="allow" data-wf-native-id-path="b7fbe9b9-72ac-a4f3-3ad7-f3056dde9e68" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="b7fbe9b9-72ac-a4f3-3ad7-f3056dde9e68" href="#" class="fs-consent_allow w-button">Accept</a></div></div></div><div fs-consent-easing="ease" fs-consent-element="preferences" fs-consent-scroll="disable" fs-consent-animation="fade" fs-consent-duration="300" class="fs-consent_prefs"><div class="fs-consent_prefs_wrapper"><div class="fs-consent_prefs_form-block w-form"><form id="email-form" name="email-form" data-name="Email Form" method="get" fs-consent-element="form" class="fs-consent_prefs_form" data-wf-page-id="664dc8b6bc52b504509197e5" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6ab"><div class="fs-consent_prefs_popup"><div class="fs-consent_prefs_header"><div class="fs-consent_prefs_heading"><strong>Manage Consent Preferences by Category</strong></div></div><div fs-consent-element="internal-categories-wrapper" class="fs-consent_prefs_list"><div fs-consent-element="internal-category-essential" class="fs-consent_prefs_option"><div class="fs-consent_checkbox_field"><div class="fs-consent_checkbox_label">Essentials</div><div><strong>Always active</strong></div></div><p class="fs-consent_prefs_description">Necessary for the site to function. Always On.<br/></p></div><div fs-consent-element="internal-category-marketing" class="fs-consent_prefs_option"><label data-wf-native-id-path="935db9ba-56b0-d2de-a5ca-249ce706ccc3" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="935db9ba-56b0-d2de-a5ca-249ce706ccc3" class="w-checkbox fs-consent_checkbox_field-2"><div class="w-checkbox-input w-checkbox-input--inputType-custom fs-consent_checkbox"></div><input type="checkbox" name="marketing" id="marketing" data-name="Marketing" fs-consent-element="checkbox-marketing" style="opacity:0;position:absolute;z-index:-1"/><span for="marketing" class="fs-consent_checkbox_label w-form-label">Marketing</span></label><p class="fs-consent_prefs_description">Used for targeted advertising.<br/></p></div><div fs-consent-element="internal-category-personalization" class="fs-consent_prefs_option"><label data-wf-native-id-path="5bb4bfd6-4dcf-dc9d-2cca-8e7e42cb9c23" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="5bb4bfd6-4dcf-dc9d-2cca-8e7e42cb9c23" class="w-checkbox fs-consent_checkbox_field-2"><div class="w-checkbox-input w-checkbox-input--inputType-custom fs-consent_checkbox"></div><input type="checkbox" name="personalization" id="personalization" data-name="Personalization" fs-consent-element="checkbox-personalization" style="opacity:0;position:absolute;z-index:-1"/><span for="personalization" class="fs-consent_checkbox_label w-form-label">Personalization</span></label><p class="fs-consent_prefs_description">Remembers your preferences and provides enhanced features.<br/></p></div><div fs-consent-element="internal-category-analytics" class="fs-consent_prefs_option"><label data-wf-native-id-path="004cec7a-1d7e-7299-bf50-501c805f0603" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="004cec7a-1d7e-7299-bf50-501c805f0603" class="w-checkbox fs-consent_checkbox_field-2"><div class="w-checkbox-input w-checkbox-input--inputType-custom fs-consent_checkbox"></div><input type="checkbox" name="analytics" id="analytics" data-name="Analytics" fs-consent-element="checkbox-analytics" style="opacity:0;position:absolute;z-index:-1"/><span for="analytics" class="fs-consent_checkbox_label w-form-label">Analytics</span></label><p class="fs-consent_prefs_description">Measures usage and improves your experience.<br/></p></div></div><div class="fs-consent_prefs_buttons"><a fs-consent-element="deny" data-wf-native-id-path="38172817-ba32-efca-c1d8-d20a3ff5d6b3" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6b3" href="#" class="fs-consent_decline w-button">Reject All</a><a fs-consent-element="allow" data-wf-native-id-path="38172817-ba32-efca-c1d8-d20a3ff5d6b5" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6b5" href="#" class="fs-consent_allow w-button">Accept All</a><input type="submit" data-wait="Please wait..." data-wf-native-id-path="38172817-ba32-efca-c1d8-d20a3ff5d6b7" data-wf-ao-click-engagement-tracking="true" data-wf-element-id="38172817-ba32-efca-c1d8-d20a3ff5d6b7" class="fs-consent_prefs_submit w-button" value="Save Preferences"/></div><div fs-consent-element="close" class="fs-consent_prefs_close"><div class="fs-consent_prefs_close-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path id="icon" d="M3.41424 2.25L2.00003 3.66421L6.58582 8.25L1.99988 12.8359L3.41409 14.2502L8.00003 9.66421L12.5854 14.2496L13.9996 12.8354L9.41424 8.25L13.9995 3.66476L12.5853 2.25055L8.00003 6.83579L3.41424 2.25Z" fill="currentColor"></path></g></svg></div></div></div></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div fs-consent-element="close" class="fs-consent_prefs_overlay"></div></div></div><div fs-consent-easing="ease" fs-consent-element="fixed-preferences" fs-consent-animation="fade" fs-consent-duration="300" class="fs-consent_open-prefs"><div fs-consent-element="open-preferences" class="fs-consent_open-prefs_wrapper"><div class="fs-consent_open-prefs_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 29 28" fill="none"><rect x="0.635254" fill="none"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M20.377 4.2453C20.9009 4.2453 21.3264 4.67081 21.3264 5.19476C21.3264 5.7187 20.9009 6.14421 20.377 6.14421C19.853 6.14421 19.4275 5.7187 19.4275 5.19476C19.4291 4.67081 19.853 4.2453 20.377 4.2453ZM20.631 12.5141C21.4503 13.7367 22.4871 14.1114 23.8335 13.2842C23.8779 13.7446 23.889 14.2146 23.8652 14.6909C23.6001 19.9558 19.1179 24.0092 13.853 23.7441C8.58975 23.4774 4.53631 18.9952 4.80146 13.7319C5.06502 8.46705 9.70275 4.36914 14.966 4.63429C14.4992 6.09499 14.8946 7.39216 16.0822 7.83355C15.0057 11.2916 17.4095 13.5541 20.631 12.5141ZM9.55668 11.833C10.3458 11.833 10.984 12.4729 10.984 13.2604C10.984 14.0479 10.3442 14.6877 9.55668 14.6877C8.76758 14.6877 8.12932 14.0479 8.12932 13.2604C8.12932 12.4729 8.76917 11.833 9.55668 11.833ZM14.0531 13.6525C14.5072 13.6525 14.8755 14.0209 14.8755 14.475C14.8755 14.9291 14.5072 15.2974 14.0531 15.2974C13.599 15.2974 13.2307 14.9291 13.2307 14.475C13.2291 14.0209 13.5974 13.6525 14.0531 13.6525ZM10.4839 17.0407C11.038 17.0407 11.4873 17.4901 11.4873 18.0442C11.4873 18.5983 11.038 19.0476 10.4839 19.0476C9.92979 19.0476 9.48047 18.5983 9.48047 18.0442C9.48047 17.4885 9.92979 17.0407 10.4839 17.0407ZM12.6464 9.36252C13.0814 9.36252 13.4323 9.715 13.4323 10.1484C13.4323 10.5835 13.0798 10.9344 12.6464 10.9344C12.2113 10.9344 11.8605 10.5819 11.8605 10.1484C11.8605 9.715 12.2129 9.36252 12.6464 9.36252ZM16.9173 17.3916C17.6461 17.3916 18.2352 17.9823 18.2352 18.7094C18.2352 19.4382 17.6445 20.0272 16.9173 20.0272C16.1886 20.0272 15.5995 19.4366 15.5995 18.7094C15.5995 17.9823 16.1902 17.3916 16.9173 17.3916ZM19.6927 7.91293C20.1817 7.91293 20.5786 8.30986 20.5786 8.79888C20.5786 9.2879 20.1817 9.68483 19.6927 9.68483C19.2037 9.68483 18.8067 9.2879 18.8067 8.79888C18.8067 8.30986 19.2037 7.91293 19.6927 7.91293Z" fill="currentColor"></path></svg></div></div></div></div></div><nav no-animation=""><section><div class="c-custom-code w-embed"><style>
   .c-get-in-touch:hover .c-git-hand {
     transform: translate(-50%, -50%) rotate(5deg) scale(1.1);
   }
