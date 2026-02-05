@@ -560,6 +560,15 @@ video {
     }
 }
 
+/* Case study cards — pure black default, dark red hover */
+.c-project-item .portfolio_bg {
+    background-color: #000000 !important;
+    transition: background-color 0.3s ease !important;
+}
+.c-project-item:hover .portfolio_bg {
+    background-color: #9E2222 !important;
+}
+
 /* Portfolio section — heading + testimonial separation */
 section[showcase="section"] .c-heading-3,
 section[showcase="section"] .c-overhead,
