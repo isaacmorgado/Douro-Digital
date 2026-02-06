@@ -561,12 +561,51 @@ div[style*="background"] {
 .c-container,
 .c-hero-wrap,
 .c-hero_text,
-.c-hero_intro,
-.c-hero_intro.cc-about,
 .footer-wrap {
     background: #000000 !important;
     background-color: #000000 !important;
     background-image: none !important;
+}
+
+/* Hero intro image — display in hero section, right side */
+.c-section.cc-hero-about .c-hero_intro.cc-about {
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 45% !important;
+    max-width: 500px !important;
+    z-index: 1 !important;
+    background: transparent !important;
+}
+.c-section.cc-hero-about .c-hero_intro.cc-about .a-img,
+.c-section.cc-hero-about .c-hero_intro.cc-about .a-img_inner {
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+.c-section.cc-hero-about .c-hero_intro.cc-about video,
+.c-section.cc-hero-about .c-hero_intro.cc-about img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+}
+/* Hide the descriptive text below hero image — keep only the visual */
+.c-section.cc-hero-about .c-hero_intro.cc-about .c-hero_intro-top {
+    display: none !important;
+}
+/* Hero wrap needs relative positioning for absolute child */
+.c-section.cc-hero-about .c-hero-wrap {
+    position: relative !important;
+    min-height: 70vh !important;
+}
+/* Ensure hero text doesn't overlap with image */
+.c-section.cc-hero-about .c-hero_text {
+    max-width: 55% !important;
 }
 
 /* Force all section backgrounds black */
