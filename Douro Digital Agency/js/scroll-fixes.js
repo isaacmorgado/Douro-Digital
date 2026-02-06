@@ -9,7 +9,27 @@
  * 5. Hydration safety for GSAP-hidden content
  * 6. Destroy IX2 on service pages (fixes IX2 + ScrollTrigger conflict)
  */
-console.log('[scroll-debug] scroll-fixes.js v5 loaded');
+console.log('[scroll-debug] scroll-fixes.js v6 loaded');
+
+/* 1 ── Back navigation — scroll to top, reinit hero-rain ─────────────── */
+window.addEventListener('popstate', function () {
+  console.log('[scroll-debug] popstate fired, scrolling to top');
+  window.scrollTo(0, 0);
+
+  // Reinitialize hero-rain if navigating back to homepage
+  var isHome = location.pathname === '/' || location.pathname.endsWith('/index.html');
+  if (isHome && window.__heroRain) {
+    console.log('[scroll-debug] homepage detected, reinitializing hero-rain');
+    if (typeof window.__heroRain.destroy === 'function') {
+      window.__heroRain.destroy();
+    }
+    setTimeout(function () {
+      if (typeof window.__heroRain.init === 'function') {
+        window.__heroRain.init();
+      }
+    }, 100);
+  }
+});
 
 /* 2 ── bfcache reload ──────────────────────────────────────────────── */
 window.addEventListener('pageshow', function (e) {

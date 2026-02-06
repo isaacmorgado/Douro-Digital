@@ -331,6 +331,12 @@ a:focus-visible {
     border-radius: 2px;
 }
 
+/* Hide Webflow partner badge */
+.c-webflow-badge,
+a:has(.c-webflow-badge) {
+    display: none !important;
+}
+
 /* Remove Refokus-specific external dependencies that might block */
 iframe[src*="intellimize"],
 script[src*="intellimize"],
@@ -503,6 +509,40 @@ html, body {
     overflow-x: hidden !important;
     overscroll-behavior: auto !important;
 }
+
+/* Force all backgrounds to pure black */
+body,
+html,
+.page-wrapper,
+.c-section,
+section,
+section[white],
+.c-hero,
+.c-section.cc-hero-about,
+.c-body-cs,
+.c-body-cs.cc-body--cstemp,
+[theme],
+[theme="dark"],
+.footer-wrap,
+.c-footer,
+.c-bg,
+.c-bg.cc-footer,
+.c-cs-temp_zoom-bg,
+.c-cs-temp_zoom-bg_gradient,
+.c-cs-temp_hero,
+.c-cs-temp_highlight-background,
+.c-cs-temp_highlight-background_img,
+.c-cs-temp_outcome-card,
+.portfolio_bg,
+[section-theme],
+[section-theme="dark"],
+main,
+article,
+div[style*="background"] {
+    background-color: #000000 !important;
+    background-image: none !important;
+    background: #000000 !important;
+}
 html.animating,
 .animating body {
     overflow-y: auto !important;
@@ -655,6 +695,32 @@ video.c-graphic.cc-portfolio {
 /* Solid bg on footer-wrap so fixed underlay never shows through gaps */
 .footer-wrap {
     background-color: #000000 !important;
+}
+
+/* Stripes video — black bg, red lines, rotated 180deg, aligned to heading */
+.c-graphic.cc-home-stats {
+    position: absolute !important;
+    top: -50% !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    height: 150% !important;
+    filter: grayscale(1) sepia(1) hue-rotate(-50deg) saturate(8) brightness(0.7) !important;
+    opacity: 0.4 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transform: rotate(180deg) !important;
+}
+/* Parent section needs positioning context */
+section[white].c-section:has(.c-graphic.cc-home-stats) {
+    position: relative !important;
+    background-color: #000000 !important;
+    overflow: hidden !important;
+}
+/* Ensure content is above stripes video */
+section[white].c-section:has(.c-graphic.cc-home-stats) .c-container {
+    position: relative !important;
+    z-index: 1 !important;
 }
 
 /* Reduced motion for accessibility */
