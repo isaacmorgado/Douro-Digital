@@ -569,15 +569,6 @@ div[style*="background"] {
     background-image: none !important;
 }
 
-/* Hide hero intro image/video box (yellow box) on service pages */
-.c-section.cc-hero-about .c-hero_intro .a-img,
-.c-section.cc-hero-about .c-hero_intro.cc-about,
-.c-hero_intro.cc-about .a-img,
-.c-hero_intro.cc-about .a-img_inner,
-.c-hero .c-hero_intro .a-img {
-    display: none !important;
-}
-
 /* Force all section backgrounds black */
 section[white],
 section[white].c-section,
