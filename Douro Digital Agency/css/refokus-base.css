@@ -3330,20 +3330,20 @@ figcaption {
   position: relative;
 }
 .c-hero-wrap.cc-about {
-  min-height: auto;
+  min-height: 70vh;
   margin-bottom: 40px;
-  padding-top: 180px;
+  padding-top: 100px;
 }
 .c-hero-wrap.cc-pb0 {
   margin-bottom: 0;
 }
 .c-hero_text {
   flex-direction: column;
-  width: 100%;
+  width: 55%;
   display: flex;
 }
 .c-hero_text.cc-about {
-  max-width: 70em;
+  max-width: 55%;
 }
 .c-line {
   background-color: var(--light);
@@ -3442,18 +3442,27 @@ figcaption {
   display: flex;
 }
 .c-hero_intro.cc-about {
-  flex-flow: row-reverse;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  max-width: 450px;
+  z-index: 1;
+  background: transparent;
 }
 .c-hero_intro-top {
   grid-column-gap: 2.5em;
   grid-row-gap: 2.5em;
   flex-direction: column;
   padding-bottom: 5em;
-  display: flex;
+  display: none;
 }
 .c-hero_intro-top.c-about {
   padding-top: 40px;
   padding-bottom: 5em;
+  display: none;
 }
 .c-tags {
   grid-column-gap: 0.7em;
