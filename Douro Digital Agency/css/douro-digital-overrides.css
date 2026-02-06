@@ -557,10 +557,36 @@ div[style*="background"] {
 .c-section.cc-hero-about,
 .c-section.cc-cs-hero,
 [section-theme="dark"],
-[hero] {
+[hero],
+.c-container,
+.c-hero-wrap,
+.c-hero_text,
+.c-hero_intro,
+.c-hero_intro.cc-about,
+.footer-wrap {
     background: #000000 !important;
     background-color: #000000 !important;
     background-image: none !important;
+}
+
+/* Hide hero intro image/video box (yellow box) on service pages */
+.c-section.cc-hero-about .c-hero_intro .a-img,
+.c-section.cc-hero-about .c-hero_intro.cc-about,
+.c-hero_intro.cc-about .a-img,
+.c-hero_intro.cc-about .a-img_inner,
+.c-hero .c-hero_intro .a-img {
+    display: none !important;
+}
+
+/* Force all section backgrounds black */
+section[white],
+section[white].c-section,
+section[white].c-section.cc-pb0,
+section.c-section,
+.c-section.cc-dark-0,
+.c-section.cc-no-overflow {
+    background: #000000 !important;
+    background-color: #000000 !important;
 }
 
 html.animating,
