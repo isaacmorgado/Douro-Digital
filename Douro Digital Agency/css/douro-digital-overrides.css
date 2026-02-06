@@ -543,6 +543,26 @@ div[style*="background"] {
     background-image: none !important;
     background: #000000 !important;
 }
+
+/* Hide hero gradient/video overlays — force pure black */
+.c-gradient,
+.c-bg video,
+.c-hero .c-bg,
+.c-section.cc-hero-about .c-bg,
+.c-section.cc-hero-about .c-gradient {
+    display: none !important;
+}
+
+/* Service page hero backgrounds — pure black */
+.c-section.cc-hero-about,
+.c-section.cc-cs-hero,
+[section-theme="dark"],
+[hero] {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
 html.animating,
 .animating body {
     overflow-y: auto !important;
