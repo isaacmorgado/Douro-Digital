@@ -1,47 +1,7 @@
 /**
- * Douro Digital Custom Overrides
- * WCAG AA Accessibility Fixes and Custom Styling
+ * Douro Digital Global Overrides
+ * Shared across all pages: nav, footer, buttons, a11y, backgrounds, scroll fixes
  */
-
-/* Contact Form — minimal underline style */
-section[white] .c-input_contact::placeholder,
-section[white] .w-input::placeholder {
-    color: #666 !important;
-}
-
-section[white] .c-input_contact,
-section[white] .w-input,
-section[white] .w-select,
-section[white] textarea {
-    background-color: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
-    border-radius: 0 !important;
-    color: #ffffff !important;
-    padding-left: 0 !important;
-}
-
-section[white] .c-input_contact:focus,
-section[white] .w-input:focus,
-section[white] .w-select:focus,
-section[white] textarea:focus {
-    border-bottom-color: rgba(255, 255, 255, 0.4) !important;
-    outline: none !important;
-}
-
-/* Send Message button — white text */
-.c-text-1_button.cc-button,
-.c-button.cc-submit,
-.c-button.cc-submit input,
-input.c-text-1_button {
-    color: #ffffff !important;
-}
-
-/* Ensure error states are visible */
-section[white] .c-input_contact.w--redirected-checked,
-section[white] .w-input.w--redirected-checked {
-    border-bottom-color: #d32f2f !important;
-}
 
 /* Left-panel menu — Refokus-style slide-in */
 .c-nav_menu {
@@ -210,72 +170,6 @@ section[white] .w-input.w--redirected-checked {
     padding-top: 2em !important;
 }
 
-/* Testimonials section — dark theme, right-aligned heading, red label */
-section[white].c-section:has(.c-testimonial--gd1--cd12) .c-overhead {
-    color: #FF0000 !important;
-}
-section[white].c-section:has(.c-testimonial--gd1--cd12) .c-title02_text--cd8--sd5 {
-    text-align: right !important;
-}
-
-/* Force visibility for GSAP-hidden elements */
-[testimonials-slider],
-[testimonials-slider] .c-home-testimonial_image,
-.c-home-testimonials_wrapper,
-.c-home-testimonials_wrapper .c-text-1,
-.c-home-testimonials_wrapper .c-text-3,
-.c-home-testimonials_wrapper .c-text-4,
-.c-testimonial--gd1--cd12 .c-heading-3,
-.c-testimonial--gd1--cd12 .c-line,
-.c-testimonial--gd1--cd12 .c-text-1,
-.c-testimonial--gd1--cd12 .c-button,
-.c-testimonial--gd1--cd12 .c-overhead {
-    opacity: 1 !important;
-    filter: none !important;
-}
-/* Force GSAP SplitText wrappers visible */
-.c-home-testimonials_wrapper .line,
-.c-home-testimonials_wrapper .word,
-.c-home-testimonials_wrapper .char,
-.c-testimonial--gd1--cd12 .line,
-.c-testimonial--gd1--cd12 .word,
-.c-testimonial--gd1--cd12 .char {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
-}
-/* Fix quote text rendering — needs explicit stacking context */
-.c-home-testimonial_content .c-text-1 {
-    position: relative !important;
-    z-index: 2 !important;
-}
-
-/* Custom fade carousel — larger images, centered */
-.c-home-testimonial_image-wrapper {
-    overflow: hidden;
-    border-radius: 8px;
-    width: 100% !important;
-    max-width: 320px !important;
-    height: auto !important;
-    aspect-ratio: 3/4 !important;
-    margin: 0 auto !important;
-    flex-shrink: 0 !important;
-}
-.c-home-testimonial_image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-}
-.c-testimonial_wrapper {
-    display: flex !important;
-    flex-direction: row-reverse !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 2em !important;
-    overflow: hidden !important;
-}
-
 /* Services section above logos — reduce bottom padding */
 section[white].c-section:has(+ section:has(.c-logos)) {
     padding-bottom: 2em !important;
@@ -310,8 +204,6 @@ section[white].c-section:has(.c-logos) {
     flex-shrink: 0 !important;
     padding: 0 2.5em !important;
 }
-
-/* Navigation menu enhancements — base CSS handles underline positioning */
 
 /* Improved button contrast */
 .c-button {
@@ -358,7 +250,11 @@ link[href*="intellimize"] {
     opacity: 1 !important;
 }
 
-/* Footer CTAs — always show text, bezier enlarge + color on hover */
+/* Footer CTAs — red default, white hover */
+.c-services {
+    background-color: #8B1A1A !important;
+}
+
 .c-services,
 .c-get-in-touch {
     transition: background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
@@ -408,36 +304,6 @@ link[href*="intellimize"] {
     fill: #1a1a1a !important;
 }
 
-/* Testimonials — decorative quote mark */
-.c-home-testimonial_content {
-    position: relative !important;
-    padding-top: 1em !important;
-    text-align: right !important;
-}
-.c-home-testimonial_content::before {
-    content: "\201C";
-    font-size: 10rem;
-    line-height: 0.6;
-    display: block;
-    color: rgba(255, 255, 255, 0.25);
-    font-family: Georgia, "Times New Roman", serif;
-    pointer-events: none;
-    margin-bottom: -0.1em;
-    text-align: right;
-}
-/* Testimonials — bigger, bold quote text */
-.c-home-testimonial_content .c-text-1 {
-    font-size: 1.4em !important;
-    line-height: 1.55 !important;
-    font-weight: 700 !important;
-}
-
-/* Red hover theme — Portfolio link in testimonials section */
-section[white].c-section:has(.c-testimonial--gd1--cd12) .c-button:hover,
-section[white].c-section:has(.c-testimonial--gd1--cd12) a:hover {
-    color: #FF0000 !important;
-}
-
 /* Red hover theme — "Learn more" service links + Portfolio + buttons */
 .c-service-row_link:hover,
 .c-service-row_link:hover .c-service-row_link-text,
@@ -456,60 +322,6 @@ section[white].c-section:has(.c-testimonial--gd1--cd12) a:hover {
     fill: #FF0000 !important;
 }
 
-/* Testimonials — remove excess min-height, tighter spacing */
-section[white].c-section:has(.c-testimonial--gd1--cd12) {
-    min-height: auto !important;
-    padding-top: 2em !important;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
-section[white].c-section:has(.c-testimonial--gd1--cd12) .c-testimonial--gd1--cd12 {
-    gap: 0 !important;
-    row-gap: 0 !important;
-}
-/* Ensure dots container doesn't get clipped */
-.c-home-testimonials_wrapper {
-    overflow: visible !important;
-}
-.c-grid_item--cd9.cc-testimonial-col {
-    overflow: visible !important;
-}
-
-/* Testimonials — mobile responsive */
-@media (max-width: 991px) {
-    .c-testimonial_wrapper {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    .c-home-testimonial_image-wrapper {
-        max-width: 300px !important;
-    }
-    .c-home-testimonial_content {
-        text-align: center !important;
-    }
-    .c-home-testimonial_content .c-text-1 {
-        font-size: 1.15em !important;
-    }
-    .c-home-testimonial_content::before {
-        font-size: 6rem;
-        text-align: center;
-    }
-    .c-grid_item--cd3.cc-cta.cc-hide-tablet {
-        display: none !important;
-    }
-}
-@media (max-width: 479px) {
-    .c-home-testimonial_image-wrapper {
-        max-width: 220px !important;
-    }
-    .c-home-testimonial_content .c-text-1 {
-        font-size: 1em !important;
-    }
-    .c-home-testimonial_content::before {
-        font-size: 4rem;
-    }
-}
-
 /* Force scroll to always work — override Webflow/GSAP overflow locks */
 html, body {
     overflow-y: auto !important;
@@ -524,18 +336,9 @@ html,
 .c-section,
 section,
 section[white],
-/* .c-hero removed — needs transparent bg so Three.js canvas (z-index:-3) shows through */
 .c-section.cc-hero-about,
-.c-body-cs,
-.c-body-cs.cc-body--cstemp,
 [theme],
 [theme="dark"],
-.c-cs-temp_zoom-bg,
-.c-cs-temp_zoom-bg_gradient,
-.c-cs-temp_hero,
-.c-cs-temp_highlight-background,
-.c-cs-temp_highlight-background_img,
-.c-cs-temp_outcome-card,
 .portfolio_bg,
 [section-theme]:not(.c-hero),
 [section-theme="dark"]:not(.c-hero),
@@ -565,19 +368,6 @@ section:not(.c-hero)[section-theme="dark"],
 .c-hero_intro.cc-about {
     background: #000000 !important;
     background-color: #000000 !important;
-    background-image: none !important;
-}
-
-/* Homepage hero — entire tree transparent so Three.js canvas (z-index:-3) shows through.
-   MUST come after service page rule so it wins on equal specificity. */
-.c-hero,
-.c-hero .c-section,
-.c-hero .c-container,
-.c-hero .c-hero-wrap,
-.c-hero .c-hero_text,
-.c-hero [hero] {
-    background: transparent !important;
-    background-color: transparent !important;
     background-image: none !important;
 }
 
@@ -611,8 +401,7 @@ a[href^="#"] {
     scroll-behavior: smooth;
 }
 
-/* Service pages: eliminate the sticky hero dead zone (base CSS sets top: -850px,
-   which eats ~850px of scroll with no visible change, making the page appear frozen) */
+/* Service pages: eliminate the sticky hero dead zone */
 .c-section.cc-hero-about {
     position: relative !important;
     top: 0 !important;
@@ -649,98 +438,24 @@ video {
     }
 }
 
-/* Case study cards — pure black default, dark red hover */
-.c-project-item .portfolio_bg {
-    background-color: #000000 !important;
-    transition: background-color 0.3s ease !important;
-}
-.c-project-item:hover .portfolio_bg {
-    background-color: #6B1515 !important;
-}
-
-/* Portfolio section — heading + testimonial separation */
-section[showcase="section"] .c-heading-3,
-section[showcase="section"] .c-overhead,
-section[showcase="section"] .c-title02--gd1--cd12 {
-    opacity: 1 !important;
-    filter: none !important;
-}
-section[showcase="section"] + section[white] {
-    margin-top: 2em !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-/* Work/portfolio page — decorative graphic: red, from left */
-video.c-graphic.cc-portfolio {
-    filter: grayscale(1) sepia(1) hue-rotate(-30deg) saturate(6) brightness(0.8) !important;
-    position: absolute !important;
-    left: 0 !important;
-    right: auto !important;
-    bottom: 0 !important;
-    width: 60% !important;
-    transform: scaleX(-1) !important;
-}
-
-/* Work/portfolio page — CTA wrappers in portfolio grid */
-.c-grid-12-col.cc-portfolio > .c-cta-wrapper.cc-24 {
-    grid-column: span 2 !important;
-    align-self: center !important;
-}
-
-/* Contact page — reduce gap between testimonials and FAQ */
-.body--contact .c-contact_content.cc-mobile-off {
-    margin-bottom: 1em !important;
-}
-.body--contact .c-contact_content:not(.cc-mobile-off) {
-    padding-top: 0 !important;
-}
-
-/* Work/portfolio page — force testimonial section visible */
-.c-quotes_item--cd6--sd5 .c-home-testimonials_wrapper,
-.c-quotes_item--cd6--sd5 .c-home-testimonial_image,
-.c-quotes_item--cd6--sd5 .c-text-1,
-.c-quotes_item--cd6--sd5 .c-text-3,
-.c-quotes_item--cd6--sd5 .c-text-4,
-.c-quotes_item--cd6--sd5 [testimonials-slider] {
-    opacity: 1 !important;
-    filter: none !important;
-}
-
-/* Contact page — force FAQ accordion + social icons visible (GSAP simple-blur never fires) */
-.body--contact [simple-blur],
-.body--contact .c-accordions,
-.body--contact .c-accordion,
-.body--contact .c-accordion_dropdown,
-.body--contact .c-accordion_dropdown-toggle,
-.body--contact .c-accordion_dropdown-toggle h3,
-.body--contact .c-contact_content,
-.body--contact .c-footer_socials--cd3 {
-    opacity: 1 !important;
-    filter: none !important;
-    visibility: visible !important;
-}
-/* Contact page — force all GSAP-hidden text visible */
-.body--contact .c-text-1,
-.body--contact .c-heading-3,
-.body--contact .c-heading-6,
-.body--contact .c-line,
-.body--contact .c-button,
-.body--contact .c-overhead,
-.body--contact .a-img,
-.body--contact [asset-reveal] {
-    opacity: 1 !important;
-    filter: none !important;
-}
-
 /* Footer underlay — don't block scroll or bleed through main content */
 .c-footer-underlay {
     pointer-events: none !important;
+    background: url(../images/footer-bg.png) center bottom / cover no-repeat #000 !important;
 }
 .c-footer-underlay a,
 .c-footer-underlay button,
 .c-footer-underlay [role="button"] {
     pointer-events: auto !important;
 }
+/* Fix button arrow/line clipping */
+.c-section.cc-footer .c-button.cc-main,
+.c-testimonial--gd1--cd12 .c-button.cc-main,
+.c-footer-underlay .c-button.cc-main,
+.c-project-item .c-button.cc-main {
+    overflow: visible !important;
+}
+
 /* Solid bg on footer-wrap so fixed underlay never shows through gaps */
 .footer-wrap {
     background-color: #000000 !important;
@@ -762,4 +477,3 @@ video.c-graphic.cc-portfolio {
         scroll-behavior: auto !important;
     }
 }
-

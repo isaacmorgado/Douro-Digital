@@ -1,0 +1,183 @@
+/**
+ * Homepage — Douro Digital Overrides
+ */
+
+/* Testimonials section — dark theme, right-aligned heading, red label */
+section[white].c-section:has(.c-testimonial--gd1--cd12) .c-overhead {
+    color: #FF0000 !important;
+}
+section[white].c-section:has(.c-testimonial--gd1--cd12) .c-title02_text--cd8--sd5 {
+    text-align: right !important;
+}
+
+/* Force visibility for GSAP-hidden elements */
+[testimonials-slider],
+[testimonials-slider] .c-home-testimonial_image,
+.c-home-testimonials_wrapper,
+.c-home-testimonials_wrapper .c-text-1,
+.c-home-testimonials_wrapper .c-text-3,
+.c-home-testimonials_wrapper .c-text-4,
+.c-testimonial--gd1--cd12 .c-heading-3,
+.c-testimonial--gd1--cd12 .c-line,
+.c-testimonial--gd1--cd12 .c-text-1,
+.c-testimonial--gd1--cd12 .c-button,
+.c-testimonial--gd1--cd12 .c-overhead {
+    opacity: 1 !important;
+    filter: none !important;
+}
+/* Force GSAP SplitText wrappers visible */
+.c-home-testimonials_wrapper .line,
+.c-home-testimonials_wrapper .word,
+.c-home-testimonials_wrapper .char,
+.c-testimonial--gd1--cd12 .line,
+.c-testimonial--gd1--cd12 .word,
+.c-testimonial--gd1--cd12 .char {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+}
+/* Fix quote text rendering — needs explicit stacking context */
+.c-home-testimonial_content .c-text-1 {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Custom fade carousel — larger images, centered */
+.c-home-testimonial_image-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    aspect-ratio: 3/4 !important;
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+}
+.c-home-testimonial_image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+.c-testimonial_wrapper {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2em !important;
+    overflow: hidden !important;
+}
+
+/* Testimonials — decorative quote mark */
+.c-home-testimonial_content {
+    position: relative !important;
+    padding-top: 1em !important;
+    text-align: right !important;
+}
+.c-home-testimonial_content::before {
+    content: "\201C";
+    font-size: 10rem;
+    line-height: 0.6;
+    display: block;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: Georgia, "Times New Roman", serif;
+    pointer-events: none;
+    margin-bottom: -0.1em;
+    text-align: right;
+}
+/* Testimonials — bigger, bold quote text */
+.c-home-testimonial_content .c-text-1 {
+    font-size: 1.4em !important;
+    line-height: 1.55 !important;
+    font-weight: 700 !important;
+}
+
+/* Red hover theme — Portfolio link in testimonials section */
+section[white].c-section:has(.c-testimonial--gd1--cd12) .c-button:hover,
+section[white].c-section:has(.c-testimonial--gd1--cd12) a:hover {
+    color: #FF0000 !important;
+}
+
+/* Testimonials — remove excess min-height, tighter spacing */
+section[white].c-section:has(.c-testimonial--gd1--cd12) {
+    min-height: auto !important;
+    padding-top: 2em !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+section[white].c-section:has(.c-testimonial--gd1--cd12) .c-testimonial--gd1--cd12 {
+    gap: 0 !important;
+    row-gap: 0 !important;
+}
+/* Ensure dots container doesn't get clipped */
+.c-home-testimonials_wrapper {
+    overflow: visible !important;
+}
+.c-grid_item--cd9.cc-testimonial-col {
+    overflow: visible !important;
+}
+
+/* Testimonials — mobile responsive */
+@media (max-width: 991px) {
+    .c-testimonial_wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .c-home-testimonial_image-wrapper {
+        max-width: 300px !important;
+    }
+    .c-home-testimonial_content {
+        text-align: center !important;
+    }
+    .c-home-testimonial_content .c-text-1 {
+        font-size: 1.15em !important;
+    }
+    .c-home-testimonial_content::before {
+        font-size: 6rem;
+        text-align: center;
+    }
+    .c-grid_item--cd3.cc-cta.cc-hide-tablet {
+        display: none !important;
+    }
+}
+@media (max-width: 479px) {
+    .c-home-testimonial_image-wrapper {
+        max-width: 220px !important;
+    }
+    .c-home-testimonial_content .c-text-1 {
+        font-size: 1em !important;
+    }
+    .c-home-testimonial_content::before {
+        font-size: 4rem;
+    }
+}
+
+/* Case study cards — red on hover, white button text */
+.c-project-item:hover .portfolio_bg {
+    background-color: #6B1515 !important;
+}
+.c-project-item .c-button:hover,
+.c-project-item .c-button:hover .c-text-1,
+.c-project-item .c-button:hover .c-button_text-wrap,
+.c-project-item .c-button:hover .c-button_arrow-wrap {
+    color: #ffffff !important;
+}
+.c-project-item .c-button:hover svg path {
+    stroke: #ffffff !important;
+}
+.c-project-item .c-button:hover .c-button_line rect {
+    fill: #ffffff !important;
+}
+
+/* Homepage hero — entire tree transparent so Three.js canvas (z-index:-3) shows through.
+   MUST come after service page rule so it wins on equal specificity. */
+.c-hero,
+.c-hero .c-section,
+.c-hero .c-container,
+.c-hero .c-hero-wrap,
+.c-hero .c-hero_text,
+.c-hero [hero] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
