@@ -1,23 +1,22 @@
 {
-  "name": "refokus-local",
-  "version": "1.0.0",
+  "name": "douro-plusdrie",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "setup": "node scripts/rewrite-urls.js && node scripts/strip-analytics.js",
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "compression": "^1.8.1",
-    "connect-livereload": "^0.6.1",
-    "express": "^4.21.0",
-    "livereload": "^0.9.3",
-    "puppeteer": "^24.36.1"
+    "framer-motion": "^12.33.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
-  "description": "",
-  "main": "clone-refokus.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
 }

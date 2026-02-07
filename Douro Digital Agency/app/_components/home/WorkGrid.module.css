@@ -1,0 +1,47 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.viewAll {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.viewAll:hover {
+  color: var(--fg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 36px;
+}
+
+.span4 {
+  grid-column: span 4;
+}
+
+.span3 {
+  grid-column: span 3;
+}
+
+.span2 {
+  grid-column: span 2;
+}

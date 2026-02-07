@@ -1,0 +1,30 @@
+.section {
+  display: flex;
+  gap: 96px;
+}
+
+.left {
+  width: 62%;
+  flex-shrink: 0;
+}
+
+.right {
+  flex: 1;
+}
+
+.sectionLabel {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: var(--fg);
+  margin-bottom: 16px;
+}
+
+.mission {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.7px;
+  color: var(--fg);
+}

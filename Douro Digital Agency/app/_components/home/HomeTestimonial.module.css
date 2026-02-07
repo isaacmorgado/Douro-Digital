@@ -1,0 +1,45 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 48px;
+  max-width: 913px;
+}
+
+.quoteIcon {
+  display: flex;
+  gap: 4px;
+}
+
+.quarterCircle {
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 0 0 24px 0;
+}
+
+.quarterCircle:last-child {
+  border-radius: 0 0 0 24px;
+}
+
+.quote {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.author {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.authorName {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.authorRole {
+  font-size: 16px;
+  color: var(--muted);
+}
